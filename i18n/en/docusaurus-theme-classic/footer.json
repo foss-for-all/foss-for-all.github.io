@@ -33,7 +33,7 @@
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
+    "description": "The label of footer link with label=GitHub linking to https://github.com/foss-for-all/foss-for-all.github.io"
   },
   "copyright": {
     "message": "Copyright © 2025 FOSS for All. Built with Docusaurus.",
