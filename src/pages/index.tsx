@@ -5,10 +5,8 @@ import Translate, {translate} from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import OpenSourceIcon from '@site/static/img/opensource.svg';
-import PeopleIcon from '@site/static/img/people.svg';
-import LeafIcon from '@site/static/img/leaf.svg';
-import HeartIcon from '@site/static/img/hand-heart.svg';
+import PictogramIcon from '@site/static/img/pictogram.svg';
+
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -25,10 +23,7 @@ function HomepageHeader() {
         
       </div>
       <div className="container images" style={{ textAlign: 'center'}}>
-        <OpenSourceIcon height={200}/>
-        <PeopleIcon height={200}/><br/>
-        <LeafIcon height={200}/>
-        <HeartIcon height={200}/>
+        <PictogramIcon style={{maxWidth: 400, maxHeight: 400}}/>
       </div>
     </header>
   );
