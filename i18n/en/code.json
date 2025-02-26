@@ -327,5 +327,20 @@
   },
   "homepage.objectives.network": {
     "message": "Building network for FOSS ecosystem participants"
+  },
+  "homepage.objectives.fiscalSponsorship.description": {
+    "message": "We aim to provide fiscal sponsorships for FOSS communities and projects. So that they can manaage their shared funds with less efforts and more transparently but without establishing a legal entity to raise shared funds with donations from individuals and enterprises then spend. This is our one of mid to long term goals that is planned after establishing our nonprofit legal entity."
+  },
+  "homepage.objectives.conference.description1": {
+    "message": "We aim to hold an annual conference where various free and open source communities from Korea and abroad can gather and interact, promote lesser-known projects, and discuss common and new concerns of community participants."
+  },
+  "homepage.objectives.conference.description2": {
+    "message": "Through this, we hope to encourage conference attendees to participate and contribute more actively and sustainably to free and open source projects."
+  },
+  "homepage.objectives.network.description1": {
+    "message": "FOSS for All aims to act as a catalyst by building a network between various free and open source projects and various participants in the free and open source ecosystem (maintainers, contributors, enthusiasts, users, companies, related organizations and institutions, etc.)."
+  },
+  "homepage.objectives.network.description2": {
+    "message": "We will provide the necessary support to enable the sharing of various cases and experiences among ecosystem participants, as well as to create synergy through collaboration when necessary."
   }
 }

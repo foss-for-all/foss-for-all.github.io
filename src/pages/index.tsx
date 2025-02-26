@@ -61,22 +61,22 @@ export default function Home(): ReactNode {
               <div className={clsx('col col--4')}>
                 <h2>🪙✍️⚖️</h2>
                 <h3><Translate id='homepage.objectives.fiscalSponsorship'>Fiscal sponsorship</Translate></h3>
-                <p>자유-오픈소스 커뮤니티와 프로젝트가 단체를 등록하거나 법인 설립을 하지 않고도 기업이나 개인의 후원을 받아 공금을 조성하고 사용할 수 있도록, 
-                  그리고 편리하면서도 투명하게 공금과 다른 자산을 관리할 수 있도록, Fiscal sponsorship을 제공하고자 합니다. 이는 비영리법인 설립 후 추진 될, 중장기적인 목표 중 하나 입니다.</p>
+                <p><Translate id='homepage.objectives.fiscalSponsorship.description'>자유-오픈소스 커뮤니티와 프로젝트가 단체를 등록하거나 법인 설립을 하지 않고도 기업이나 개인의 후원을 받아 공금을 조성하고 사용할 수 있도록,
+                  그리고 편리하면서도 투명하게 공금과 다른 자산을 관리할 수 있도록, Fiscal sponsorship을 제공하고자 합니다. 이는 비영리법인 설립 후 추진 될, 중장기적인 목표 중 하나 입니다.</Translate></p>
               </div>
               <div className={clsx('col col--4')}>
                 <h2>🗣️🎙️🧑‍💻</h2>
                 <h3><Translate id='homepage.objectives.conference'>FOSS for All 컨퍼런스</Translate></h3>
-                <p>국내외 다양한 자유-오픈소스 커뮤니티가 모여 교류하고, 잘 알려지지 않은 프로젝트의 확산,
-                  커뮤니티 참여자들의 공통된 그리고 새로운 고민을 함께 논의할 수 있는 컨퍼런스를 매년 개최하고자 합니다.</p>
-                <p>이를 통해 컨퍼런스 참석자들이 자유-오픈소스 프로젝트에 더 적극적으로 그리고 지속적으로 참여 및 기여하도록 하고자 합니다.</p>
+                <p><Translate id='homepage.objectives.conference.description1'>국내외 다양한 자유-오픈소스 커뮤니티가 모여 교류하고, 잘 알려지지 않은 프로젝트의 확산,
+                  커뮤니티 참여자들의 공통된 그리고 새로운 고민을 함께 논의할 수 있는 컨퍼런스를 매년 개최하고자 합니다.</Translate></p>
+                <p><Translate id='homepage.objectives.conference.description2'>이를 통해 컨퍼런스 참석자들이 자유-오픈소스 프로젝트에 더 적극적으로 그리고 지속적으로 참여 및 기여하도록 하고자 합니다..</Translate></p>
               </div>
               <div className={clsx('col col--4')}>
                 <h2>🧑‍💻🤝🏢</h2>
                 <h3><Translate id='homepage.objectives.network'>생태계 참여자간 네트워크 구축</Translate></h3>
-                <p>여러 자유-오픈소스 프로젝트와 자유-오픈소스 생태계의 다양한 참여자(메인테이너, 기여자, 애호가, 사용자, 기업, 관련 단체와 기관 등)간 네트워크를 구축하여,
-                  FOSS for All 이 그 사이 촉매제 역할을 하고자 합니다. </p>
-                <p>상호간 각종 사례와 경험 공유될 수 있도록 함은 물론, 생태계 참여자간 필요하면 협업하여 시너지를 만들 수 있도록 필요한 지원을 제공 할 것입니다.
+                <p><Translate id='homepage.objectives.network.description1'>여러 자유-오픈소스 프로젝트와 자유-오픈소스 생태계의 다양한 참여자(메인테이너, 기여자, 애호가, 사용자, 기업, 관련 단체와 기관 등)간 네트워크를 구축하여,
+                  FOSS for All 이 그 사이 촉매제 역할을 하고자 합니다.</Translate></p>
+                <p><Translate id='homepage.objectives.network.description2'>상호간 각종 사례와 경험 공유될 수 있도록 함은 물론, 생태계 참여자간 필요하면 협업하여 시너지를 만들 수 있도록 필요한 지원을 제공 할 것입니다.</Translate>
                 </p>
               </div>
 
