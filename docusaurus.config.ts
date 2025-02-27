@@ -90,6 +90,10 @@ const config: Config = {
           type: 'localeDropdown',
           position: 'right',
         },
+        {
+          type: 'search',
+          position: 'right',
+        },
       ],
     },
     footer: {
