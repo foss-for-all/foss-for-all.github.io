@@ -22,19 +22,17 @@ export default function SearchBar({
     const [isOpen, setIsOpen] = useState(false);
     function openModal() {
         setIsOpen(true);
+        new PagefindUI({ element: "#search", showSubResults: true });
       }
     function closeModal() {
         setIsOpen(false);
     }
-    useEffect(() => {
-        new PagefindUI({ element: "#search", showSubResults: true });
-    }, []);
 
     return (
         <>
             <Modal
                 isOpen={isOpen}
-                onRequestClose={setIsOpen}>
+                onRequestClose={closeModal}>
                 <div id="search" ></div>
             </Modal>
             <Head>
