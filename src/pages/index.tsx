@@ -23,7 +23,7 @@ function HomepageHeader() {
 
       </div>
       <div className="container images" style={{ textAlign: 'center' }}>
-        <PictogramIcon style={{ maxWidth: 400, maxHeight: 400 }} />
+        <PictogramIcon style={{ maxWidth: "100%", maxHeight: 400 }} />
       </div>
     </header>
   );
