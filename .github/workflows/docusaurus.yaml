@@ -24,6 +24,9 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
+      - name: Generate Pagefind search index
+        run: npx pagefind --site build
+
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
