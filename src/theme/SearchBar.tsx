@@ -6,17 +6,25 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { ReactElement, useEffect } from "react";
 import Head from '@docusaurus/Head';
+import clsx from 'clsx';
 
-export default function SearchBar(): ReactElement {
+interface SearchBarProps {
+    isSearchBarExpanded: boolean;
+    handleSearchBarToggle?: (expanded: boolean) => void;
+}
+
+export default function SearchBar({
+    handleSearchBarToggle,
+}: SearchBarProps): ReactElement {
     const { siteConfig } = useDocusaurusContext();
     useEffect(() => {
         window.addEventListener('DOMContentLoaded', (event) => {
             new PagefindUI({ element: "#search", showSubResults: true });
         });
-      }, []);
-      
+    }, []);
+
     return (
-        <div>
+        <>
             <Head>
                 <link
                     href={`/pagefind/pagefind-ui.css`}
@@ -24,7 +32,7 @@ export default function SearchBar(): ReactElement {
                 />
                 <script src="/pagefind/pagefind-ui.js"></script>
             </Head>
-            <div id="search"></div>
-        </div>
+            <div id="search" className={clsx("navbar__search")}></div>
+        </>
     );
 }
