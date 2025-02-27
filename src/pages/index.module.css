@@ -16,6 +16,10 @@
     padding: 2rem;
     flex-direction: column;
   }
+
+  .hero__title{
+    size: 2.5rem;
+  }
 }
 
 .buttons {
