@@ -16,10 +16,10 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <Heading as="h1" className={styles.hero__title}>
           {siteConfig.title}
         </Heading>
-        <p className="hero__title"><Translate id='homepage.heroBanner.tagLine'>지속 가능한 자유-오픈소스 소프트웨어 생태계 구축을 위한 이니셔티브</Translate></p>
+        <p className={styles.hero__title}><Translate id='homepage.heroBanner.tagLine'>지속 가능한 자유-오픈소스 소프트웨어 생태계 구축을 위한 이니셔티브</Translate></p>
 
       </div>
       <div className="container images" style={{ textAlign: 'center' }}>
