@@ -69,7 +69,7 @@ export default function Home(): ReactNode {
                 <h3><Translate id='homepage.objectives.conference'>FOSS for All 컨퍼런스</Translate></h3>
                 <p><Translate id='homepage.objectives.conference.description1'>국내외 다양한 자유-오픈소스 커뮤니티가 모여 교류하고, 잘 알려지지 않은 프로젝트의 확산,
                   커뮤니티 참여자들의 공통된 그리고 새로운 고민을 함께 논의할 수 있는 컨퍼런스를 매년 개최하고자 합니다.</Translate></p>
-                <p><Translate id='homepage.objectives.conference.description2'>이를 통해 컨퍼런스 참석자들이 자유-오픈소스 프로젝트에 더 적극적으로 그리고 지속적으로 참여 및 기여하도록 하고자 합니다..</Translate></p>
+                <p><Translate id='homepage.objectives.conference.description2'>이를 통해 컨퍼런스 참석자들이 자유-오픈소스 프로젝트에 더 적극적으로 그리고 지속적으로 참여 및 기여하도록 하고자 합니다.</Translate></p>
               </div>
               <div className={clsx('col col--4')}>
                 <h2>🧑‍💻🤝🏢</h2>
