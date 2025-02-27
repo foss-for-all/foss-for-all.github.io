@@ -18,9 +18,7 @@ export default function SearchBar({
 }: SearchBarProps): ReactElement {
     const { siteConfig } = useDocusaurusContext();
     useEffect(() => {
-        window.addEventListener('DOMContentLoaded', (event) => {
-            new PagefindUI({ element: "#search", showSubResults: true });
-        });
+        new PagefindUI({ element: "#search", showSubResults: true });
     }, []);
 
     return (
