@@ -4,9 +4,11 @@
 // npm run swizzle @docusaurus/theme-search-algolia SearchBar
 
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import { ReactElement, useEffect } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import Head from '@docusaurus/Head';
 import clsx from 'clsx';
+import DefaultNavbarItem from "@theme/NavbarItem/DefaultNavbarItem";
+import Modal from 'react-modal';
 
 interface SearchBarProps {
     isSearchBarExpanded: boolean;
@@ -17,12 +19,24 @@ export default function SearchBar({
     handleSearchBarToggle,
 }: SearchBarProps): ReactElement {
     const { siteConfig } = useDocusaurusContext();
+    const [isOpen, setIsOpen] = useState(false);
+    function openModal() {
+        setIsOpen(true);
+      }
+    function closeModal() {
+        setIsOpen(false);
+    }
     useEffect(() => {
         new PagefindUI({ element: "#search", showSubResults: true });
     }, []);
 
     return (
         <>
+            <Modal
+                isOpen={isOpen}
+                onRequestClose={setIsOpen}>
+                <div id="search" ></div>
+            </Modal>
             <Head>
                 <link
                     href={`/pagefind/pagefind-ui.css`}
@@ -30,7 +44,7 @@ export default function SearchBar({
                 />
                 <script src="/pagefind/pagefind-ui.js"></script>
             </Head>
-            <div id="search" className={clsx("navbar__search")}></div>
+            <DefaultNavbarItem label={"🔍"} onClick={openModal}/>
         </>
     );
 }
