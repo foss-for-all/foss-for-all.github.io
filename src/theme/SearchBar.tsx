@@ -15,6 +15,13 @@ interface SearchBarProps {
     handleSearchBarToggle?: (expanded: boolean) => void;
 }
 
+function SearchBarTextField(){
+    useEffect(() => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    }, []);
+    return(<div id="search"></div>);
+}
+
 export default function SearchBar({
     handleSearchBarToggle,
 }: SearchBarProps): ReactElement {
@@ -22,7 +29,7 @@ export default function SearchBar({
     const [isOpen, setIsOpen] = useState(false);
     function openModal() {
         setIsOpen(true);
-        new PagefindUI({ element: "#search", showSubResults: true });
+        
       }
     function closeModal() {
         setIsOpen(false);
@@ -32,8 +39,9 @@ export default function SearchBar({
         <>
             <Modal
                 isOpen={isOpen}
-                onRequestClose={closeModal}>
-                <div id="search" ></div>
+                onRequestClose={closeModal}
+                >
+                <SearchBarTextField/>
             </Modal>
             <Head>
                 <link
