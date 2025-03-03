@@ -18,5 +18,13 @@
   "item.label.GitHub": {
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
+  },
+  "item.label.소식/공고": {
+    "message": "News/Announcements",
+    "description": "Navbar item with label 소식 & 공고"
+  },
+  "item.label.공시/규정": {
+    "message": "공시/규정",
+    "description": "Navbar item with label 공시/규정"
   }
 }

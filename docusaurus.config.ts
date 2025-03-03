@@ -76,15 +76,21 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: '문서',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: '소식/공고', position: 'left'},
         {
           href: 'https://github.com/foss-for-all/foss-for-all.github.io',
           label: 'GitHub',
           position: 'right',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'disclosuresSidebar',
+          position: 'right',
+          label: '공시/규정',
         },
         {
           type: 'localeDropdown',
@@ -104,7 +110,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/docs',
             },
           ],
         },
