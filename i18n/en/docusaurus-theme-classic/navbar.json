@@ -21,10 +21,14 @@
   },
   "item.label.소식/공고": {
     "message": "News/Announcements",
-    "description": "Navbar item with label 소식 & 공고"
+    "description": "Navbar item with label 소식/공고"
   },
   "item.label.공시/규정": {
-    "message": "공시/규정",
+    "message": "Disclosures/Bylaws",
     "description": "Navbar item with label 공시/규정"
+  },
+  "item.label.문서": {
+    "message": "Documentations",
+    "description": "Navbar item with label 문서"
   }
 }
