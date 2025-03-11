@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'FOSS for All',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'I, You, Us, and FOSS for All!',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
