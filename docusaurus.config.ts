@@ -74,12 +74,12 @@ const config: Config = {
       //   src: 'img/logo.svg',
       // },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'docsSidebar',
-          position: 'left',
-          label: '문서',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'docsSidebar',
+        //   position: 'left',
+        //   label: '문서',
+        // },
         {to: '/blog', label: '소식/공고', position: 'left'},
         {
           href: 'https://github.com/foss-for-all/foss-for-all.github.io',
