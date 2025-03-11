@@ -59,5 +59,6 @@
 
 ## 붙임
 
-- [창립총회 자료집](./창립총회%20자료집.pdf)
+- [창립총회 자료집](./창립총회_자료집.pdf)
+- [창립총회 회의록](./창립총회_회의록.pdf)
 - [창립총회 녹화영상 (YouTube)](https://www.youtube.com/watch?v=orpUhYZGuVs)
