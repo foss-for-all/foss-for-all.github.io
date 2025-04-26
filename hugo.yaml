@@ -33,15 +33,19 @@ menu:
     - name: 소개
       pageRef: /about
       weight: 1
+      identifier: menu_about
     - name: 문서
       pageRef: /docs
       weight: 2
+      identifier: menu_docs
     - name: 소식/공고
       pageRef: /blog
       weight: 3
+      identifier: menu_news
     - name: 공시/규정
       pageRef: /disclosures
       weight: 4
+      identifier: menu_disclosures
     - name: 검색
       weight: 5
       params:
