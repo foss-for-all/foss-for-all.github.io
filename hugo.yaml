@@ -57,12 +57,14 @@ menu:
         icon: github
 
 params:
+  images:
+    - /images/f4a-social-card.png
   navbar:
     displayTitle: true
     displayLogo: false
 
   footer:
-    displayCopyright: false
+    displayCopyright: true
     displayPoweredBy: false
 
   editURL:
