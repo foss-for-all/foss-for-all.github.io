@@ -52,3 +52,11 @@ If the previous activities are successful, we plan to move on to the next stage 
 If the activities after the establishment of the non-profit corporation are also successful, we are considering obtaining designation as a public interest corporation under the Inheritance and Gift Tax Act through a separate procedure to support the issuance of donation receipts. If this is achieved, we expect that it will help make it easier to raise funds necessary for operation, as we will be able to support the issuance of donation receipts when individuals or companies donate to free/open source communities or projects supported by the organization through fiscal sponsorship.
 
 {{% /steps %}}
+
+## Contact us
+
+If you have any inquries or would like to discuss about collaborations, feel free to contact us with email!
+
+{{< cards cols="1" >}}
+  {{< card link="mailto:contact@fossforall.org" title="Contact us with email" icon="mail" >}}
+{{< /cards >}}
