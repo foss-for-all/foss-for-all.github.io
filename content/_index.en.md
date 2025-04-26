@@ -41,10 +41,12 @@ FOSS for All is an initiative started by various communities and projects in Kor
 
 {{< hextra/feature-grid >}}
   {{< hextra/feature-card
+    link="docs/fiscal-sponsorship/"
     title="Fiscal sponsorship 🪙✍️⚖️"
     subtitle="We aim to support transparent fundraising and management for communities and projects by enabling them to receive sponsorship from companies or individuals without the need to register as an organization or establish a corporation. This is a mid- to long-term goal to be pursued after establishing a nonprofit corporation."
   >}}
   {{< hextra/feature-card
+    link="docs/conference/"
     title="FOSS for All Conference 🗣️🎙️🧑‍💻"
     subtitle="An annual conference for the exchange of various FOSS communities in Korea and abroad, spreading lesser-known projects, and discussing common and new concerns among community participants. The goal is to encourage active and continuous participation and contribution to FOSS projects."
   >}}
