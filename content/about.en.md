@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: About us
 type: about
 ---
 
