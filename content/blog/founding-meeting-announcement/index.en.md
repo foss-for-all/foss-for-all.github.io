@@ -15,6 +15,7 @@ excludeSearch: true
 >    Switch to Korean to see original announcement along with the announcement PDF file
 
 In order to promote the establishment of the FOSS for All nonprofit organization, we would like to convene the founding general meeting as follows, and all those who wish to participate in the establishment of the organization are welcome to participate.
+<!--more-->
 
 **-- Below --**
 
