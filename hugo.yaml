@@ -61,7 +61,13 @@ params:
     - /images/f4a-social-card.png
   navbar:
     displayTitle: true
-    displayLogo: false
+    displayLogo: true
+    logo:
+      path: favicon.svg
+      dark: favicon-dark.svg
+      link: /
+      width: 25
+      height: 20
 
   footer:
     displayCopyright: true
