@@ -61,11 +61,11 @@ FOSS for All is an initiative started by various communities and projects in Kor
   Follow us
 {{< /hextra/hero-section >}}
 {{< hextra/hero-subtitle >}}
-Follow FOSS for All in Social media to keep up to date!
+Follow FOSS for All in Social media to keep up to date! -------
 {{< /hextra/hero-subtitle >}}
 
 {{< cards cols="2" >}}
-  {{< card link="http://pf.kakao.com/_kbxgBn" title="Kakao Talk Channel" icon="chat" >}}
+  {{< card link="http://pf.kakao.com/_kbxgBn" title="KakaoTalk" icon="chat" >}}
   {{< card link="https://github.com/foss-for-all" title="GitHub" icon="github" >}}
 {{< /cards >}}
 </div>
