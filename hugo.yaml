@@ -24,37 +24,72 @@ languages:
   ko:
     languageName: 한국어(Korean)
     weight: 1
+    menu:
+      main:
+        - name: 소개
+          pageRef: /about
+          weight: 1
+          identifier: menu_about
+        - name: 문서
+          pageRef: /docs
+          weight: 2
+          identifier: menu_docs
+        - name: 소식/공고
+          pageRef: /blog
+          weight: 3
+          identifier: menu_news
+        - name: 공시/규정
+          pageRef: /disclosures
+          weight: 4
+          identifier: menu_disclosures
+        - name: 검색
+          weight: 5
+          params:
+            type: search
+        - name: GitHub
+          weight: 6
+          url: "https://github.com/foss-for-all"
+          params:
+            icon: github
+        - name: English
+          url: /en/
+          weight: 100
+          identifier: menu_lang_en
+
   en:
     languageName: English
     weight: 2
-
-menu:
-  main:
-    - name: 소개
-      pageRef: /about
-      weight: 1
-      identifier: menu_about
-    - name: 문서
-      pageRef: /docs
-      weight: 2
-      identifier: menu_docs
-    - name: 소식/공고
-      pageRef: /blog
-      weight: 3
-      identifier: menu_news
-    - name: 공시/규정
-      pageRef: /disclosures
-      weight: 4
-      identifier: menu_disclosures
-    - name: 검색
-      weight: 5
-      params:
-        type: search
-    - name: GitHub
-      weight: 6
-      url: "https://github.com/foss-for-all"
-      params:
-        icon: github
+    menu:
+      main:
+        - name: About
+          pageRef: /about
+          weight: 1
+          identifier: menu_about
+        - name: Docs
+          pageRef: /docs
+          weight: 2
+          identifier: menu_docs
+        - name: Blog
+          pageRef: /blog
+          weight: 3
+          identifier: menu_news
+        - name: Disclosures
+          pageRef: /disclosures
+          weight: 4
+          identifier: menu_disclosures
+        - name: Search
+          weight: 5
+          params:
+            type: search
+        - name: GitHub
+          weight: 6
+          url: "https://github.com/foss-for-all"
+          params:
+            icon: github
+        - name: 한국어
+          url: /ko/
+          weight: 100
+          identifier: menu_lang_ko
 
 params:
   images:
