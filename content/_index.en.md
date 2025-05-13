@@ -55,3 +55,17 @@ FOSS for All is an initiative started by various communities and projects in Kor
     subtitle="We aim to build a network among various players in the FOSS ecosystem (maintainers, contributors, enthusiasts, users, companies, related organizations, etc.), with FOSS for All serving as a catalyst in between."
   >}}
 {{< /hextra/feature-grid >}}
+
+<div class="hx-mt-6 hx-mb-6">
+{{< hextra/hero-section >}}
+  Follow us
+{{< /hextra/hero-section >}}
+{{< hextra/hero-subtitle >}}
+Follow FOSS for All in Social media to keep up to date!
+{{< /hextra/hero-subtitle >}}
+
+{{< cards cols="2" >}}
+  {{< card link="http://pf.kakao.com/_kbxgBn" title="Kakao Talk Channel" icon="chat" >}}
+  {{< card link="https://github.com/foss-for-all" title="GitHub" icon="github" >}}
+{{< /cards >}}
+</div>

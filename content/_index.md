@@ -55,3 +55,18 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
     subtitle="여러 자유/오픈소스 프로젝트와 생태계의 다양한 참여자(메인테이너, 기여자, 애호가, 사용자, 기업, 관련 단체와 기관 등)간 네트워크를 구축하여, FOSS for All 이 그 사이 촉매제 역할을 하고자 합니다."
   >}}
 {{< /hextra/feature-grid >}}
+
+<div class="hx-mt-6 hx-mb-6">
+{{< hextra/hero-section >}}
+  팔로우 하기
+{{< /hextra/hero-section >}}
+{{< hextra/hero-subtitle >}}
+각종 소셜 미디어에서 FOSS for All을 팔로우 하여 소식을 받아보세요!
+{{< /hextra/hero-subtitle >}}
+
+{{< cards cols="2" >}}
+  {{< card link="http://pf.kakao.com/_kbxgBn" title="카카오톡 채널" icon="chat" >}}
+  {{< card link="https://github.com/foss-for-all" title="GitHub" icon="github" >}}
+{{< /cards >}}
+</div>
+
