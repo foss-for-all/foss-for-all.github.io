@@ -56,7 +56,7 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
   >}}
 {{< /hextra/feature-grid >}}
 
-<div class="hx-mt-6 hx-mb-6">
+<div class="hx-mt-6 hx-mb-6 hx-w-full">
 {{< hextra/hero-section >}}
   팔로우 하기
 {{< /hextra/hero-section >}}
@@ -64,9 +64,11 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
 각종 소셜 미디어에서 FOSS for All을 팔로우 하여 소식을 받아보세요!
 {{< /hextra/hero-subtitle >}}
 
-{{< cards cols="2" >}}
+{{< cards cols="3" >}}
   {{< card link="http://pf.kakao.com/_kbxgBn" title="카카오톡 채널" icon="chat" >}}
   {{< card link="https://github.com/foss-for-all" title="GitHub" icon="github" >}}
+  {{< card link="https://www.linkedin.com/company/foss-for-all/" title="LinkedIn" icon="linkedin" >}}
+  {{< card link="https://www.facebook.com/fossforall/" title="Facebook" icon="facebook" >}}
 {{< /cards >}}
 </div>
 
