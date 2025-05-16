@@ -14,7 +14,7 @@ layout: docs
 {{< cards >}}
   {{< card link="./legal" title="정관 및 세칙" subtitle="단체의 정관과 세칙(하위 규정 및 규약) 및 행동강령과 각 문서별 제정/개정 내역을 확인하실 수 있습니다." >}}
   {{< card link="./" title="개인정보 처리방침" tag="준비중" subtitle="단체의 용도별 개인정보 처리방침 (일반, 온라인 서비스용, 컨퍼런스용 등)을 확인하실 수 있습니다." >}}  
-  {{< card link="./board-of-directors" title="운영위원회" tag="준비중" subtitle="단체의 현재 및 과거 운영위원회 구성원을 확인할 수 있습니다." >}}
+  {{< card link="./board-of-directors" title="운영위원회" subtitle="단체의 현재 및 과거 운영위원회 구성원을 확인할 수 있습니다." >}}
   {{< card link="./meetings" title="회의록/회의자료" subtitle= "단체의 총회 및 운영위원회 등 각급회의 회의록을 확인하실 수 있습니다." >}}
   {{< card link="./" title="회계공시" tag="준비중"  subtitle= "단체의 예산 및 결산 내역 등을 확인하실 수 있습니다." >}}
 {{< /cards >}}

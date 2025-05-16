@@ -1,6 +1,6 @@
 ---
 title: About us
-type: about
+type: docs
 ---
 
 > Note: This is a machine translated page. We'll improve the translation in the future.
