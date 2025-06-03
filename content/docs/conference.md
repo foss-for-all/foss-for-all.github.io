@@ -9,3 +9,7 @@ FOSS for All에서 주최하는 FOSS for ALl컨퍼런스는 “Free and Open Sou
 FOSS for All은 오픈소스 소프트웨어와 커뮤니티에 관심 있는 누구나 참여할 수 있으며, 개발자, 기여자, 디자이너, 번역가, 기획자 등 다양한 역할의 사람들이 경험과 지식을 공유하는 장으로  기술 발표, 커뮤니티 부스, 패널 토크 등 다양한 프로그램이 마련될 예정입니다.
 
 FOSS for All의 모든 운영은 후원과 기부 그리고 자원봉사자들의 참여를 통해 이루어집니다. 참가비를 최소화하여 누구나 부담 없이 참여할 수 있도록 하며, 상업적 목적 없이 자유 오픈소스 철학에 따라 개방적이고 자발적인 참여 정신을 유지합니다.
+
+{{< cards >}}
+  {{< card link="https://2025.fossforall.org" title="FOSS for All Conference 2025" subtitle="첫 FOSS for All Conference 는 2025년 11월 8일 광운대학교에서 개최 예정입니다." >}}
+{{< /cards >}}
