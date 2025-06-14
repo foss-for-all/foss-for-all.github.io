@@ -8,7 +8,7 @@ authors:
 tags:
   - nonprofit
   - nonprofit-announcement
-excludeSearch: true
+excludeSearch: false
 ---
 
 포스포올(FOSS for All) 단체 설립 추진을 위해 창립총회를 아래와 같이 소집하고자 하오니, 단체 설립에 참여하고자 하시는 분들은 빠짐없이 참여 해 주시기 바랍니다.

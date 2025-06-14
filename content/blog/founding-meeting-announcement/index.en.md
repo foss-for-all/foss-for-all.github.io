@@ -8,7 +8,7 @@ authors:
 tags:
   - nonprofit
   - nonprofit-announcement
-excludeSearch: true
+excludeSearch: false
 ---
 
 >    Translated announcement   
