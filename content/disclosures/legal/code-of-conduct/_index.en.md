@@ -38,20 +38,20 @@ For this to be a comfortable and enjoyable space for everyone, we need to be con
 
 ### About the Code of Conduct
 
-This Code of Conduct is the minimum standard to create an atmosphere of mutual trust.  
+This Code of Conduct is the minimum standard to create an atmosphere of mutual trust.   
 Failure to adhere to these standards may result in restricted participation in the community.
 
-This Code of Conduct applies to all spaces and activities operated by FOSS for All.  
+This Code of Conduct applies to all spaces and activities operated by FOSS for All.   
 Examples: offline events, gatherings, online communities, forums, social media, email, etc.
 
-It applies to all members participating in FOSS for All, including organizers, event participants and speakers, project maintainers, etc.  
-Regardless of space or role, everyone must follow these standards together.
+It applies to all members participating in FOSS for All, including organizers, event participants and speakers, project maintainers, etc.   
+Regardless of space or role, everyone must follow these standards together. 
 
-If you witness or experience a violation of the Code of Conduct, please let us know at any time.  
+If you witness or experience a violation of the Code of Conduct, please let us know at any time.    
 **coc@fossforall.org**
 
 ---
 
-FOSS For All is a community for everyone.  
-Please cherish and respect each other, and enjoy your time together.  
+FOSS For All is a community for everyone.    
+Please cherish and respect each other, and enjoy your time together.    
 After all, we are all here to have a good time.
