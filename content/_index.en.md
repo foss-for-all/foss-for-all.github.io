@@ -69,5 +69,6 @@ Follow FOSS for All in Social media to keep up to date!
   {{< card link="https://github.com/foss-for-all" title="GitHub" icon="github" >}}
   {{< card link="https://www.linkedin.com/company/foss-for-all/" title="LinkedIn" icon="linkedin" >}}
   {{< card link="https://www.facebook.com/fossforall/" title="Facebook" icon="facebook" >}}
+  {{< card link="https://discord.gg/YbXE6ZMpbX" title="Discord" icon="discord" >}}
 {{< /cards >}}
 </div>
