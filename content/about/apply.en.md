@@ -11,6 +11,8 @@ If so, we encourage you to apply for membership. Once you submit your applicatio
 > Articles of Incorporation [Article 5 (Membership Qualifications)](/disclosures/legal/articles-of-incorporation/#%ec%a0%9c5%ec%a1%b0-%ed%9a%8c%ec%9b%90%ec%9d%98-%ec%9e%90%ea%b2%a9)  
 > Members of this organization are those who agree with its founding purpose, submit the prescribed application form, and are approved by the Board of Directors.
 
+We are currently reviewing procedures and regulations for those who wish to contribute by paying membership dues but find it difficult to participate in organization activities. Please wait a little longer!
+
 ## Membership Application and Approval Process
 
 1. Click the button below to fill out and submit the membership application form.
