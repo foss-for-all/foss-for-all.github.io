@@ -70,6 +70,7 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
   {{< card link="https://www.linkedin.com/company/foss-for-all/" title="LinkedIn" icon="linkedin" >}}
   {{< card link="https://www.facebook.com/fossforall/" title="Facebook" icon="facebook" >}}
   {{< card link="https://discord.gg/YbXE6ZMpbX" title="Discord" icon="discord" >}}
+  {{< card link="https://www.youtube.com/@FOSSforAll" title="YouTube" icon="youtube" >}}
 {{< /cards >}}
 </div>
 
