@@ -20,10 +20,10 @@ The new membership application process has been established, so you can now appl
 The new membership application and approval process is as follows:
 
 1. Fill out and submit the online membership application form.
-   - Please note that there are more questions than you might expect, so it may take some time to complete.
+    - Please note that there are more questions than you might expect, so it may take some time to complete.
 2. After the Board of Directors reviews your application, if there are no issues, an interview will be conducted.
-   - Submitted applications are reviewed at the regular Board of Directors meetings held quarterly.
-   - The interview schedule will be coordinated by the Board of Directors, and the interview will be based on the contents of your application.
+    - Submitted applications are reviewed at the regular Board of Directors meetings held quarterly.
+    - The interview schedule will be coordinated by the Board of Directors, and the interview will be based on the contents of your application.
 3. The Board of Directors will review the interview results and notify you of the final membership approval decision.
 
 If you would like to check the details and submit your membership application, please click the link below.
