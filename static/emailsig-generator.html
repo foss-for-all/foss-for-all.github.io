@@ -105,6 +105,7 @@
             const url = document.getElementById('url').value;
 
             const signatureHTML = `
+            <div class="signature-area">
                 <table class="signature-table">
                     <tr>
                         <td>
@@ -143,6 +144,7 @@
                         </td>
                     </tr>
                 </table>
+            </div>
             `;
 
             const previewDiv = document.getElementById('signature-preview');
@@ -151,7 +153,7 @@
         }
 
         function copySignature() {
-            const signatureHTML = document.querySelector('.signature-table').outerHTML;
+            const signatureHTML = document.querySelector('.signature-area').outerHTML;
             navigator.clipboard.writeText(signatureHTML).then(() => {
                 alert('HTML이 클립보드에 복사되었습니다!');
             }).catch(err => {
