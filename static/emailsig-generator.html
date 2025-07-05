@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOSS for All 이메일 서명 생성기</title>
+    <!-- Pretendard 웹폰트 CDN 추가 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <style>
+        body {
+            font-family: 'Pretendard', 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #signature-preview {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .copy-btn {
+            margin-top: 10px;
+            background-color: #28a745;
+        }
+        .signature-table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .signature-table td {
+            padding: 2px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FOSS for All 이메일 서명 생성기</h1>
+        <div class="form-group">
+            <label for="name">이름:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="title">직위:</label>
+            <input type="text" id="title" required>
+        </div>
+        <div class="form-group">
+            <label for="email">이메일:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile">휴대폰:</label>
+            <input type="tel" id="mobile" required>
+        </div>
+        <div class="form-group">
+            <label for="url">추가URL:</label>
+            <input type="text" id="url" required>
+        </div>
+        <button onclick="generateSignature()">서명 생성하기</button>
+        
+        <div id="signature-preview"></div>
+        <button class="copy-btn" onclick="copySignature()" style="display: none;">HTML 복사하기</button>
+    </div>
+
+    <script>
+        function generateSignature() {
+            const name = document.getElementById('name').value;
+            const title = document.getElementById('title').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const url = document.getElementById('url').value;
+
+            const signatureHTML = `
+                <table class="signature-table">
+                    <tr>
+                        <td>
+                            <img src="data:image/png;base64,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" style="width: 32px; height: 32px;"/>
+                        </td>
+                        <td style="font-size: 24px; text-align: left; font-weight: bold;">
+                            FOSS for All
+                        </td>
+                    </tr>
+                </table>
+                <table class="signature-table">
+                    <tr>
+                        <td style="font-weight: bold; font-size: 14px;">${name}</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #666; font-size: 12px;">${title}</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 12px;">
+                            Email | <a href="mailto:${email}" style="color: #007bff; text-decoration: none;">${email}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 12px;">
+                            Mobile | <a href="tel:${mobile}" style="color: #007bff; text-decoration: none;">${mobile}</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 12px;">
+                            <a href="https://fossforall.org" style="color: #007bff; text-decoration: none;">https://fossforall.org</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 12px;">
+                            <a href="${url}" style="color: #007bff; text-decoration: none;">${url}</a>
+                        </td>
+                    </tr>
+                </table>
+            `;
+
+            const previewDiv = document.getElementById('signature-preview');
+            previewDiv.innerHTML = '<h3>미리보기:</h3>' + signatureHTML;
+            document.querySelector('.copy-btn').style.display = 'block';
+        }
+
+        function copySignature() {
+            const signatureHTML = document.querySelector('.signature-table').outerHTML;
+            navigator.clipboard.writeText(signatureHTML).then(() => {
+                alert('HTML이 클립보드에 복사되었습니다!');
+            }).catch(err => {
+                console.error('복사하는 중 오류가 발생했습니다:', err);
+                alert('복사하는 중 오류가 발생했습니다.');
+            });
+        }
+    </script>
+</body>
+</html>
