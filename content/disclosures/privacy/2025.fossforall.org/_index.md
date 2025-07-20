@@ -1,4 +1,4 @@
-## FOSS for All Conference 2025 준비위원회 개인정보 처리방침
+## FOSS for All Conference 2025 개인정보 처리방침
 
 **FOSS for All Conference 2025 준비위원회**(이하 '준비위원회')는 「개인정보 보호법」 등 관련 법령을 준수합니다. 준비위원회는 아래와 같이 개인정보를 처리합니다.
 
