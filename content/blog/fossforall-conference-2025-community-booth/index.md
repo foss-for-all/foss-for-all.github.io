@@ -1,6 +1,6 @@
 ---
 title: FOSS for All Conference 2025 커뮤니티 부스 지원 안내
-date: 2025-08-19
+date: 2025-08-18
 authors:
   - name: 한영빈
     link: https://github.com/sukso96100

@@ -1,6 +1,6 @@
 ---
 title: Apply for Community Booth at FOSS for All Conference 2025
-date: 2025-08-19
+date: 2025-08-18
 authors:
   - name: Youngbin Han
     link: https://github.com/sukso96100
