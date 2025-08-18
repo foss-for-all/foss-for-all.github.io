@@ -6,7 +6,7 @@ authors:
     link: https://github.com/sukso96100
     image: https://github.com/sukso96100.png
 tags:
-  - f4a25
+  - f4ac25
 excludeSearch: false
 ---
 
