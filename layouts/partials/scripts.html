@@ -1,0 +1,18 @@
+{{/* Core scripts (theme, menu, tabs, etc.) */}}
+{{- partial "scripts/core.html" . -}}
+
+{{/* Search */}}
+{{- partial "scripts/search.html" . -}}
+
+{{/* Mermaid */}}
+{{- if (.Store.Get "hasMermaid") -}}
+  {{- partial "scripts/mermaid.html" . -}}
+{{- end -}}
+
+{{/* KaTex */}}
+{{- if .Page.Params.math -}}
+  {{- partial "scripts/katex.html" . -}}
+{{- end -}}
+
+{{/* Custom script for loopback.social banner */}}
+<script src="https://loopback.social/banner.js" defer></script>
