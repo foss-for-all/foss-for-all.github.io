@@ -1,6 +1,6 @@
 ---
 title: FOSS for All Conference 2025 참가 등록 안내
-date: 2025-09-26
+date: 2025-09-25
 authors:
   - name: 한영빈
     link: https://github.com/sukso96100
