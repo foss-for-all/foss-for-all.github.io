@@ -1,6 +1,6 @@
 ---
 title: FOSS for All Conference 2025 - Register today!
-date: 2025-09-26
+date: 2025-09-25
 authors:
   - name: Youngbin Han
     link: https://github.com/sukso96100
