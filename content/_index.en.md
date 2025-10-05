@@ -73,6 +73,6 @@ Follow FOSS for All in Social media to keep up to date!
   {{< card link="https://www.youtube.com/@FOSSforAll" title="YouTube" icon="youtube" >}}
   {{< card link="https://www.instagram.com/foss_for_all" title="Instagram" icon="instagram" >}}
   {{< card link="https://mastodon.social/@fossforall" title="Mastodon" icon="mastodon" >}}
-  {{< card link="https://x.com/FOSS_for_All" title="X.com" icon="x" >}}
+  {{< card link="https://x.com/FOSS_for_All" title="X.com" icon="x-twitter" >}}
 {{< /cards >}}
 </div>
