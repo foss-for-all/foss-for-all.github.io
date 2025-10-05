@@ -73,6 +73,7 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
   {{< card link="https://www.youtube.com/@FOSSforAll" title="YouTube" icon="youtube" >}}
   {{< card link="https://www.instagram.com/foss_for_all" title="Instagram" icon="instagram" >}}
   {{< card link="https://mastodon.social/@fossforall" title="Mastodon" icon="mastodon" >}}
+  {{< card link="https://x.com/FOSS_for_All" title="X.com" icon="x" >}}
 {{< /cards >}}
 </div>
 
