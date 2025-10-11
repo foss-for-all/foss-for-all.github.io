@@ -27,6 +27,12 @@ layout: "hextra-home"
 
 {{< /hextra/hero-container >}}
 
+<div class="hx-mt-6 hx-mb-6 hx-w-full">
+{{< cards cols="2" >}}
+  {{< card link="https://2025.fossforall.org/en" title="FOSS for All Conference 2025" subtitle="November 8th, Kwangwoon University, Seoul, South Korea - Register today!" icon="calendar" >}}
+{{< /cards >}}
+</div>
+
 <div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-section >}}
   Our goals and projects
@@ -50,7 +56,7 @@ FOSS for All is an initiative started by various communities and projects in Kor
     title="FOSS for All Conference 🗣️🎙️🧑‍💻"
     subtitle="An annual conference for the exchange of various FOSS communities in Korea and abroad, spreading lesser-known projects, and discussing common and new concerns among community participants. The goal is to encourage active and continuous participation and contribution to FOSS projects."
   >}}
-  {{< hextra/feature-card 
+  {{< hextra/feature-card
     title="Connecting ecosystem players 🧑‍💻🤝🏢"
     subtitle="We aim to build a network among various players in the FOSS ecosystem (maintainers, contributors, enthusiasts, users, companies, related organizations, etc.), with FOSS for All serving as a catalyst in between."
   >}}

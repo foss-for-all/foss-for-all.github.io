@@ -27,6 +27,12 @@ layout: "hextra-home"
 
 {{< /hextra/hero-container >}}
 
+<div class="hx-mt-6 hx-mb-6 hx-w-full">
+{{< cards cols="2" >}}
+  {{< card link="https://2025.fossforall.org" title="FOSS for All Conference 2025" subtitle="11월 8일 광운대학교 세빛관, 비마관 - 지금 참가등록 하세요!" icon="calendar" >}}
+{{< /cards >}}
+</div>
+
 <div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-section >}}
   목표 및 추진사업
@@ -50,7 +56,7 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
     title="FOSS for All 컨퍼런스 🗣️🎙️🧑‍💻"
     subtitle="국내외 다양한 자유/오픈소스 커뮤니티의 교류, 잘 알려지지 않은 프로젝트의 확산, 커뮤니티 참여자들의 공통된 그리고 새로운 고민을 함께 논의할 수 있는 연례 컨퍼런스로, 참석자들의 자유/오픈소스 프로젝트 적극적, 지속적으로 참여 및 기여 촉진을 목적으로 합니다."
   >}}
-  {{< hextra/feature-card 
+  {{< hextra/feature-card
     title="생태계 참여자 연결 🧑‍💻🤝🏢"
     subtitle="여러 자유/오픈소스 프로젝트와 생태계의 다양한 참여자(메인테이너, 기여자, 애호가, 사용자, 기업, 관련 단체와 기관 등)간 네트워크를 구축하여, FOSS for All 이 그 사이 촉매제 역할을 하고자 합니다."
   >}}
@@ -76,4 +82,3 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
   {{< card link="https://x.com/FOSS_for_All" title="X.com" icon="x-twitter" >}}
 {{< /cards >}}
 </div>
-
