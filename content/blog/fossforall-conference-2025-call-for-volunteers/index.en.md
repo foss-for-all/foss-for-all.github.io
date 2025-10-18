@@ -1,5 +1,5 @@
 ---
-title: FOSS for All Conference 2025 Volunteer Recruitment
+title: FOSS for All Conference 2025 Call for Volunteers
 date: 2025-10-18
 authors:
   - name: Youngbin Han
