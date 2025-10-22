@@ -30,6 +30,13 @@
     - 이용목적: 참가자 리스트 확보 및 내부 CRM 활용 / 카우치베이스 관련 뉴스레터 및 마케팅 목적 활용
     - 보유 및 이용기간: 2026년 11월 10일 까지
     - 파기 방법: 보유기간 만료시 CRM 시스템에서 전자적으로 복구 불가하도록 자동 삭제
+  - **Rocky Enterprise Software Foundation**
+    - 1191 Solano Ave. Unit 6850, Albany, CA 94706, United States
+    - 연락처: Brian Clemens(brian@resf.org)
+    - 제공항목: 이메일 주소, 성명, 소속, 직무
+    - 이용목적: Rocky Linux 행사 정보 제공
+    - 보유 및 이용기간: 2026년 11월 10일 까지
+    - 파기 방법: 전자적으로 보관된 자료는 복구 불가하도록 삭제, 물리적으로 보관된 자료는 파쇄 또는 소각
   - **Ascensio Systems Pte. Ltd.**
     -  68 Circular Road, #02-01, Singapore 049422
     - 연락처: Marketing team(marketing@onlyoffice.com)
