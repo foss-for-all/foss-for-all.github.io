@@ -1,6 +1,6 @@
 ---
 title: FOSS for All 첫 밋업에 초대합니다!
-date: 2025-09-05
+date: 2026-01-18
 authors:
   - name: 한영빈
     link: https://github.com/sukso96100
