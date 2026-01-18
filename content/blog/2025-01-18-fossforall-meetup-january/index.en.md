@@ -42,9 +42,9 @@ The Digital Inclusion Act, which guarantees digital rights for all citizens incl
 | --- | --- | --- |
 | 12:30 - 13:00 | Check-in | |
 | 13:00 - 13:30 | Opening | |
-| 13:30 - 14:30 | Domestic fiscal sponsorship case study - focusing on the Root Impact example | Seongjun Moon (Director @ FOSS for All) |
-| 14:30 - 14:40 | Break | |
-| 14:40 - 16:00 | Visiting the Ministry of Gender Equality and Family's digital inclusion technology expert roundtable | Joowang Im, Taehee Kim (Member @ FOSS for All) |
+| 13:30 - 14:50 | Visiting the Ministry of Gender Equality and Family's digital inclusion technology expert roundtable | Joowang Im, Taehee Kim (Member @ FOSS for All) |
+| 14:50 - 15:00 | Break | |
+| 15:00 - 16:00 | Domestic fiscal sponsorship case study - focusing on the Root Impact example | Seongjun Moon (Director @ FOSS for All) |
 | 16:00 - 17:00 | Networking | |
 
 ※ The schedule may be adjusted on the day.
