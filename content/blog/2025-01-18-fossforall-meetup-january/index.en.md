@@ -32,7 +32,7 @@ Abroad, it is common for nonprofit organizations to provide fiscal sponsorship t
 
 ### Visiting the Ministry of Gender Equality and Family's digital inclusion technology expert roundtable
 
-**Joowang Im, Tahee Kim - Member @ FOSS for All**
+**Joowang Im, Taehee Kim - Member @ FOSS for All**
 
 The Digital Inclusion Act, which guarantees digital rights for all citizens including people with disabilities, seniors, women, and immigrants, was enacted last year and will take full effect at the end of January this year. Accordingly, major government ministries such as the Ministry of Gender Equality and Family have recently held expert roundtables to gather advice from various sectors. At this roundtable, FOSS for All's steering committee and members were appointed as advisors and joined civic tech networks, impact investors, and other civil society groups to collaborate. In this session, FOSS for All proposed the core values of open source for realizing digital inclusion and future contribution plans in depth. This talk shares how open source can build an inclusive technology ecosystem amid these policy changes.
 
@@ -44,7 +44,7 @@ The Digital Inclusion Act, which guarantees digital rights for all citizens incl
 | 13:00 - 13:30 | Opening | |
 | 13:30 - 14:30 | Domestic fiscal sponsorship case study - focusing on the Root Impact example | Seongjun Moon (Director @ FOSS for All) |
 | 14:30 - 14:40 | Break | |
-| 14:40 - 16:00 | Visiting the Ministry of Gender Equality and Family's digital inclusion technology expert roundtable | Joowang Im, Tahee Kim (Member @ FOSS for All) |
+| 14:40 - 16:00 | Visiting the Ministry of Gender Equality and Family's digital inclusion technology expert roundtable | Joowang Im, Taehee Kim (Member @ FOSS for All) |
 | 16:00 - 17:00 | Networking | |
 
 ※ The schedule may be adjusted on the day.
