@@ -2,7 +2,7 @@
 title: You're invited to the first FOSS for All meetup!
 date: 2026-01-18
 authors:
-  - name: 한영빈
+  - name: Youngbin Han
     link: https://github.com/sukso96100
     image: https://github.com/sukso96100.png
 tags:
