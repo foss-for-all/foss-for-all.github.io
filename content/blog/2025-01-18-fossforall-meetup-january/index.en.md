@@ -46,6 +46,7 @@ The Digital Inclusion Act, which guarantees digital rights for all citizens incl
 | 14:30 - 14:40 | Break | |
 | 14:40 - 16:00 | Visiting the Ministry of Gender Equality and Family's digital inclusion technology expert roundtable | Joowang Im, Tahee Kim (Member @ FOSS for All) |
 | 16:00 - 17:00 | Networking | |
+
 ※ The schedule may be adjusted on the day.
 
 ## Sponsors
