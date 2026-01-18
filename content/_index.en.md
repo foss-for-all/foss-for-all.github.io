@@ -29,7 +29,7 @@ layout: "hextra-home"
 
 <div class="hx-mt-6 hx-mb-6 hx-w-full">
 {{< cards cols="2" >}}
-  {{< card link="https://2025.fossforall.org/en" title="FOSS for All Conference 2025" subtitle="November 8th, Kwangwoon University, Seoul, South Korea - Register today!" icon="calendar" >}}
+  {{< card link="https://ticketa.co/e/ajhehljc" title="FOSS for All January Meetup" subtitle="January 31st, Modu Labs Gangnam Campus, Seoul, South Korea - Register today!" icon="calendar" >}}
 {{< /cards >}}
 </div>
 
