@@ -10,7 +10,7 @@ tags:
 excludeSearch: false
 ---
 
-![](./image.png)
+{{< figure src="image.png" >}}
 
 The most realistic barrier that open source projects and communities started with passion face is the difficulty of cost and accounting management. Establishing a separate organization to solve this problem presents another significant burden.
 

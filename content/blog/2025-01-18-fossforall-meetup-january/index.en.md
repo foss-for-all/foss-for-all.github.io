@@ -1,5 +1,5 @@
 ---
-title: You're invited to the first FOSS for All meetup!
+title: Join our very first FOSS for All meetup!
 date: 2026-01-18
 authors:
   - name: Youngbin Han
@@ -11,7 +11,7 @@ tags:
 excludeSearch: false
 ---
 
-![](./meetup.png)
+{{< figure src="meetup.png" >}}
 
 Join our very first FOSS for All meetup in late January!
 
@@ -52,7 +52,7 @@ The Digital Inclusion Act, which guarantees digital rights for all citizens incl
 ## Sponsors
 This meetup venue was sponsored by **Modu Labs**!
 
-![](./modulabs.svg)
+{{< figure src="modulabs.svg" >}}
 
 ## Registration
 
