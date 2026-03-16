@@ -1,6 +1,6 @@
 ---
 title: 2026년 정기총회 소집공고
-date: 2026-03-17
+date: 2026-03-16
 authors:
   - name: 한영빈
     link: https://github.com/sukso96100
