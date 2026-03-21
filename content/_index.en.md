@@ -29,7 +29,7 @@ layout: "hextra-home"
 
 <div class="hx-mt-6 hx-mb-6 hx-w-full">
 {{< cards cols="2" >}}
-  {{< card link="https://ticketa.co/e/ajhehljc" title="FOSS for All January Meetup" subtitle="January 31st, Modu Labs Gangnam Campus, Seoul, South Korea - Register today!" icon="calendar" >}}
+  {{< card link="/blog/2026-general-meeting-announcement/" title="Regular General Meeting 2026" subtitle="March 29th, Hanbit Media - Building B 2F Classroom 60, Seoul, South Korea" icon="calendar" >}}
 {{< /cards >}}
 </div>
 
