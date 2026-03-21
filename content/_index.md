@@ -29,7 +29,7 @@ layout: "hextra-home"
 
 <div class="hx-mt-6 hx-mb-6 hx-w-full">
 {{< cards cols="2" >}}
-  {{< card link="https://ticketa.co/e/ajhehljc" title="FOSS for All 1월 밋업" subtitle="1월 31일 모두의연구소 강남캠퍼스 라운지 - 지금 참가등록 하세요!" icon="calendar" >}}
+  {{< card link="/blog/2026-general-meeting-announcement/" title="2026년 정기총회" subtitle="3월 29일 오후 1시, 한빛미디어 B동 2층 강의실60" icon="calendar" >}}
 {{< /cards >}}
 </div>
 
