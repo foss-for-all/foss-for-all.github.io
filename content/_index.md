@@ -23,6 +23,7 @@ layout: "hextra-home"
 
 <div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-button text="단체 소개" link="about/" >}}
+{{< hextra/hero-button text="가입/후원" link="about/join" >}}
 </div>
 
 {{< /hextra/hero-container >}}

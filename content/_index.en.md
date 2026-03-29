@@ -23,6 +23,7 @@ layout: "hextra-home"
 
 <div class="hx-mt-6 hx-mb-6">
 {{< hextra/hero-button text="About us" link="about/" >}}
+{{< hextra/hero-button text="Become a member" link="about/join" >}}
 </div>
 
 {{< /hextra/hero-container >}}
