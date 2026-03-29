@@ -5,42 +5,42 @@ layout: "hextra-home"
 
 {{< hextra/hero-container
   image="/images/pictogram_bg.svg"
-  imageClass="hx-block hx-overflow-hidden hx-rounded-3xl"
+  imageClass="hx:block hx:overflow-hidden hx:rounded-3xl"
   imageWidth="500" imageHeight="500"
   imageTitle="Pictogram"
 >}}
-<div class="hx-mt-12 hx-mb-6">
+<div class="hx:mt-12 hx:mb-6">
 {{< hextra/hero-headline >}}
   FOSS for All
 {{< /hextra/hero-headline >}}
 </div>
 
-<div class="hx-mt-6 hx-mb-6">
+<div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-subtitle >}}
   An initiative to build sustainable FOSS ecosystem in Korea and beyond
 {{< /hextra/hero-subtitle >}}
 </div>
 
-<div class="hx-mt-6 hx-mb-6">
+<div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-button text="About us" link="about/" >}}
 {{< hextra/hero-button text="Become a member" link="about/join" >}}
 </div>
 
 {{< /hextra/hero-container >}}
 
-<div class="hx-mt-6 hx-mb-6 hx-w-full">
+<div class="hx:mt-6 hx:mb-6 hx:w-full">
 {{< cards cols="2" >}}
   {{< card link="/blog/2026-general-meeting-announcement/" title="Regular General Meeting 2026" subtitle="March 29th, Hanbit Media - Building A 2F Classroom 60, Seoul, South Korea" icon="calendar" >}}
 {{< /cards >}}
 </div>
 
-<div class="hx-mt-6 hx-mb-6">
+<div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-section >}}
   Our goals and projects
 {{< /hextra/hero-section >}}
 </div>
 
-<div class="hx-mt-6 hx-mb-6">
+<div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-subtitle >}}
 FOSS for All is an initiative started by various communities and projects in Korea and abroad to build a sustainable Free and Open Source (FOSS) ecosystem. Through the following key goals and project initiatives, we aim to support various FOSS communities and projects so they can focus on what matters most, and help them grow sustainably.
 {{< /hextra/hero-subtitle >}}
@@ -63,7 +63,7 @@ FOSS for All is an initiative started by various communities and projects in Kor
   >}}
 {{< /hextra/feature-grid >}}
 
-<div class="hx-mt-6 hx-mb-6 hx-w-full">
+<div class="hx:mt-6 hx:mb-6 hx:w-full">
 {{< hextra/hero-section >}}
   Follow us
 {{< /hextra/hero-section >}}
