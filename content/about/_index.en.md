@@ -58,7 +58,7 @@ If the activities after the establishment of the non-profit corporation are also
 Would like to join us as a member to actively contribute to our organization? Click the button below to learn more and apply today.
 
 {{< cards cols="1" >}}
-  {{< card link="/en/about/apply" title="Become a member" icon="link" >}}
+  {{< card link="/en/about/join" title="Become a member" icon="link" >}}
 {{< /cards >}}
 
 ## Contact us
