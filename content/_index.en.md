@@ -38,9 +38,7 @@ layout: "hextra-home"
 {{< hextra/hero-section >}}
   Our goals and projects
 {{< /hextra/hero-section >}}
-</div>
 
-<div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-subtitle >}}
 FOSS for All is an initiative started by various communities and projects in Korea and abroad to build a sustainable Free and Open Source (FOSS) ecosystem. Through the following key goals and project initiatives, we aim to support various FOSS communities and projects so they can focus on what matters most, and help them grow sustainably.
 {{< /hextra/hero-subtitle >}}

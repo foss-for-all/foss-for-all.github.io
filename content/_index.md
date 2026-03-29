@@ -38,9 +38,7 @@ layout: "hextra-home"
 {{< hextra/hero-section >}}
   목표 및 추진사업
 {{< /hextra/hero-section >}}
-</div>
 
-<div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-subtitle >}}
 FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Open source) 생태계 구축을 위해 국내외 다양한 커뮤니티와 프로젝트가 모여 시작된 이니셔티브 입니다. 아래와 같은 주요 목표와 사업 추진을 통해, 국내외 다양한 자유/오픈소스 커뮤니티와 프로젝트가 운영되는데 있어 더 중요한 것에 집중할 수 있도록 지원하여 지속 가능한 방법으로 성장할 수 있도록 하는 데 기여 하고자 합니다.
 {{< /hextra/hero-subtitle >}}
