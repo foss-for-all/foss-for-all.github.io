@@ -15,7 +15,7 @@ excludeSearch: false
 
 <!--more-->
 
-[위임장 서식 PDF 파일](./2026-03-29-정기총회-위임장.pdf)
+[위임장 서식 PDF 파일](/disclosures/meetings/general-meetings/2026-03-29-regular-general-meeting/2026-03-29-정기총회-위임장.pdf)
 
 **-- 아래 --**
 
