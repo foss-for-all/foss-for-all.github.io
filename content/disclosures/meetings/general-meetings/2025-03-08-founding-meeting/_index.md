@@ -61,6 +61,7 @@ title: 2025년 03월 08일 창립총회
 
 ## 붙임
 
+- [소집 공고문 PDF 파일](./founding-meeting-announcement.pdf)
 - [창립총회 자료집](./창립총회_자료집.pdf)
 - [창립총회 회의록](./창립총회_회의록.pdf)
 - [창립총회 녹화영상 (YouTube)](https://www.youtube.com/watch?v=orpUhYZGuVs)

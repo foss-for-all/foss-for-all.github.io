@@ -16,7 +16,7 @@ excludeSearch: false
 <!--more-->
 
 
-[공고문 PDF 파일](./founding-meeting-announcement.pdf)
+[공고문 PDF 파일](/disclosures/meetings/general-meetings/2026-03-29-regular-general-meeting/founding-meeting-announcement.pdf)
 
 **-- 아래 --**
 
