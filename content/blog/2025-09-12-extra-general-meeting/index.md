@@ -17,7 +17,7 @@ excludeSearch: false
 <!--more-->
 
 
-[위임장 서식 PDF 파일](./2025-09-12-임시총회-위임장.pdf)
+[위임장 서식 PDF 파일](/disclosures/meetings/general-meetings/2025-09-12-extra-general-meeting/2025-09-12-임시총회-위임장.pdf)
 
 **-- 아래 --**
 
