@@ -52,12 +52,16 @@ languages:
           pageRef: /disclosures
           weight: 4
           identifier: menu_disclosures
-        - name: 검색
+        - name: 후원하기
+          pageRef: /donate
           weight: 5
+          identifier: menu_donate
+        - name: 검색
+          weight: 6
           params:
             type: search
         - name: GitHub
-          weight: 6
+          weight: 7
           url: "https://github.com/foss-for-all"
           params:
             icon: github
@@ -87,12 +91,16 @@ languages:
           pageRef: /disclosures
           weight: 4
           identifier: menu_disclosures
-        - name: Search
+        - name: Donate
+          pageRef: /donate
           weight: 5
+          identifier: menu_donate
+        - name: Search
+          weight: 6
           params:
             type: search
         - name: GitHub
-          weight: 6
+          weight: 7
           url: "https://github.com/foss-for-all"
           params:
             icon: github
