@@ -8,6 +8,13 @@ hasCJKLanguage: true
 module:
   imports:
     - path: github.com/imfing/hextra
+  # Mount Korean content under English so untranslated pages fall back to KO
+  mounts:
+    - source: content
+      target: content
+    - source: content
+      target: content
+      lang: en
 
 markup:
   # allow raw html
@@ -51,10 +58,10 @@ languages:
           url: "https://github.com/foss-for-all"
           params:
             icon: github
-        - name: English
-          url: /en/
-          weight: 100
-          identifier: menu_lang_en
+        - weight: 100
+          identifier: menu_lang
+          params:
+            type: language-switch
 
   en:
     languageName: English
@@ -86,10 +93,10 @@ languages:
           url: "https://github.com/foss-for-all"
           params:
             icon: github
-        - name: 한국어
-          url: /ko/
-          weight: 100
-          identifier: menu_lang_ko
+        - weight: 100
+          identifier: menu_lang
+          params:
+            type: language-switch
 
 params:
   images:
