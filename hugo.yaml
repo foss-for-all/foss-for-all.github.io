@@ -44,8 +44,8 @@ languages:
           pageRef: /docs
           weight: 2
           identifier: menu_docs
-        - name: 소식/공고
-          pageRef: /blog
+        - name: 소식
+          pageRef: /news
           weight: 3
           identifier: menu_news
         - name: 공시/규정
@@ -83,8 +83,8 @@ languages:
           pageRef: /docs
           weight: 2
           identifier: menu_docs
-        - name: Blog
-          pageRef: /blog
+        - name: News
+          pageRef: /news
           weight: 3
           identifier: menu_news
         - name: Disclosures
