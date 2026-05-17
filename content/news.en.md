@@ -3,7 +3,7 @@ title: News
 layout: "hextra-home"
 ---
 {{< hextra/hero-headline >}}
-# News from FOSS for All
+News from FOSS for All
 {{< /hextra/hero-headline >}}
 Check out our latest news and scheduled events!
 
