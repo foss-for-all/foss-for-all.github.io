@@ -7,9 +7,22 @@ layout: docs
 
 
 - 이메일: contact at fossforall.org
-- 주소: 서울특별시 영등포구 영등포로 150, 지하1층 L145 가라지 182호
 - 사업자등록번호(고유번호): 310-82-77358
 - 대표자: 한영빈
+
+주소(국문)
+```
+서울특별시 영등포구 영등포로 150
+지하1층 L145 가라지 182호
+(우) 07292
+```
+
+Address(English)
+```
+150, Yeongdeungpo-ro, Yeongdeungpo-gu
+B1, L145 Garage #182
+Seoul 07292, Republic of Korea
+```
 
 {{< cards >}}
   {{< card link="./legal" title="정관 및 세칙" subtitle="단체의 정관과 세칙(하위 규정 및 규약) 및 행동강령과 각 문서별 제정/개정 내역을 확인하실 수 있습니다." >}}
