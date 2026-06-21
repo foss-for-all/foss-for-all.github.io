@@ -9,18 +9,29 @@
 {{- end -}}
 
 <section class="hx:my-12 hx:w-full">
-  {{- with .Get "title" -}}
+  {{- $sectionTitle := .Get "title" -}}
+  {{- with .Get "titleKey" -}}
+    {{- $sectionTitle = T . -}}
+    {{- if eq $sectionTitle . -}}
+      {{- errorf "missing i18n translation for %q" . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $sectionTitle -}}
     <div class="hx:mb-5 hx:flex hx:items-center hx:justify-between hx:gap-4">
       <h2 class="hx:mt-5 hx:text-2xl hx:font-semibold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ . }}</h2>
     </div>
   {{- end -}}
   {{- $cards := slice -}}
   {{- range $feeds -}}
-    {{- $title := .title | default "" -}}
+    {{- $titleKey := .titleKey | default "" -}}
     {{- $type := .type | default "" -}}
     {{- $path := .path | default "" -}}
-    {{- if not $title -}}
-      {{- errorf "missing required config: params.discourse.mainPageFeedCards[].title" -}}
+    {{- if not $titleKey -}}
+      {{- errorf "missing required config: params.discourse.mainPageFeedCards[].titleKey" -}}
+    {{- end -}}
+    {{- $title := T $titleKey -}}
+    {{- if eq $title $titleKey -}}
+      {{- errorf "missing i18n translation for %q" $titleKey -}}
     {{- end -}}
     {{- if not $path -}}
       {{- errorf "missing required config: params.discourse.mainPageFeedCards[].path for %q" $title -}}

@@ -113,22 +113,22 @@ params:
   discourse:
     baseURL: "https://forum.fossforall.org"
     mainPageFeedCards:
-      - title: 소식
+      - titleKey: discourse_main_news
         path: /c/news/11
         type: feed
-      - title: 블로그
+      - titleKey: discourse_main_blog
         path: /c/blog/8
         type: feed
-      - title: 프로젝트
+      - titleKey: discourse_main_projects
         path: /c/project-discussion/16
         type: feed
-      - title: 포스포올 행사
+      - titleKey: discourse_main_fossforall_events
         path: /c/calendar/fossforall-events/7
         type: event
-      - title: 포스포올 일정
+      - titleKey: discourse_main_fossforall_schedules
         path: /c/calendar/fossforall-calendar/17
         type: event
-      - title: 커뮤니티 행사
+      - titleKey: discourse_main_community_events
         path: /c/calendar/community-events/6
         type: event
 

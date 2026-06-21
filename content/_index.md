@@ -29,7 +29,7 @@ layout: "hextra-home"
 {{< /hextra/hero-container >}}
 
 <div class="hx:mt-6 hx:mb-6 hx:w-full">
-{{< discourse-feed-cards title="포스포올 소식" >}}
+{{< discourse-feed-cards titleKey="discourse_main_section_title" >}}
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-section >}}
