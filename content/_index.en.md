@@ -29,10 +29,7 @@ layout: "hextra-home"
 {{< /hextra/hero-container >}}
 
 <div class="hx:mt-6 hx:mb-6 hx:w-full">
-{{< cards cols="2" >}}
-  {{< card link="/blog/2026-general-meeting-announcement/" title="Regular General Meeting 2026" subtitle="March 29th, Hanbit Media - Building A 2F Classroom 60, Seoul, South Korea" icon="calendar" >}}
-{{< /cards >}}
-</div>
+{{< discourse-feed-cards title="Latest News" >}}
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-section >}}

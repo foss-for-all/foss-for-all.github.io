@@ -1,0 +1,102 @@
+{{- $feeds := slice
+  (dict "title" "소식" "json" "https://forum.fossforall.org/c/news/11.json" "more" "https://forum.fossforall.org/c/news/11" "type" "feed")
+  (dict "title" "블로그" "json" "https://forum.fossforall.org/c/blog/8.json" "more" "https://forum.fossforall.org/c/blog/8" "type" "feed")
+  (dict "title" "프로젝트" "json" "https://forum.fossforall.org/c/project-discussion/16.json" "more" "https://forum.fossforall.org/c/project-discussion/16" "type" "feed")
+  (dict "title" "포스포올 행사" "json" "https://forum.fossforall.org/c/calendar/fossforall-events/7.json" "more" "https://forum.fossforall.org/c/calendar/fossforall-events/7" "type" "event")
+  (dict "title" "포스포올 일정" "json" "https://forum.fossforall.org/c/calendar/fossforall-calendar/17.json" "more" "https://forum.fossforall.org/c/calendar/fossforall-calendar/17" "type" "event")
+  (dict "title" "커뮤니티 행사" "json" "https://forum.fossforall.org/c/calendar/community-events/6.json" "more" "https://forum.fossforall.org/c/calendar/community-events/6" "type" "event")
+-}}
+
+<section class="hx:my-12 hx:w-full">
+  {{- with .Get "title" -}}
+    <div class="hx:mb-5 hx:flex hx:items-center hx:justify-between hx:gap-4">
+      <h2 class="hx:mt-5 hx:text-2xl hx:font-semibold hx:tracking-tight hx:text-slate-900 hx:dark:text-slate-100">{{ . }}</h2>
+    </div>
+  {{- end -}}
+  {{- $cards := slice -}}
+  {{- range $feeds -}}
+    {{- $title := .title -}}
+    {{- $type := .type -}}
+    {{- $jsonURL := .json -}}
+    {{- $feed := dict -}}
+    {{- with try (resources.GetRemote $jsonURL) -}}
+      {{- with .Err -}}
+        {{- errorf "failed to fetch Discourse JSON feed %q: %s" $jsonURL . -}}
+      {{- else with .Value -}}
+        {{- $feed = . | transform.Unmarshal -}}
+      {{- else -}}
+        {{- errorf "failed to fetch Discourse JSON feed %q" $jsonURL -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $items := slice -}}
+    {{- with $feed.topic_list.topics -}}
+      {{- if reflect.IsSlice . -}}
+        {{- $items = . -}}
+      {{- else -}}
+        {{- $items = slice . -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $entries := slice -}}
+    {{- if eq $type "event" -}}
+      {{- range $items -}}
+        {{- if and (not .pinned) .event_starts_at .event_ends_at (ge (time.AsTime .event_ends_at) now) -}}
+          {{- $entries = $entries | append . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $entries = sort $entries "event_starts_at" "asc" -}}
+    {{- else -}}
+      {{- $entries = $items -}}
+    {{- end -}}
+
+    {{- $shown := 0 -}}
+    {{- range $entries -}}
+      {{- if and (lt $shown 1) (not .pinned) -}}
+        {{- $shown = add $shown 1 -}}
+        {{- $link := printf "https://forum.fossforall.org/t/%s/%v" .slug .id -}}
+        {{- $summary := .excerpt | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `image[0-9]+×[0-9]+\s+[0-9]+\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
+        {{- if not $summary -}}
+          {{- $topicURL := printf "%s.json" $link -}}
+          {{- with try (resources.GetRemote $topicURL) -}}
+            {{- with .Err -}}
+              {{- warnf "failed to fetch Discourse topic JSON %q: %s" $topicURL . -}}
+            {{- else with .Value -}}
+              {{- with ((. | transform.Unmarshal).post_stream.posts | first 1) -}}
+                {{- $summary = (index . 0).cooked | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `image[0-9]+×[0-9]+\s+[0-9]+\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+
+        {{- $subtitle := "" -}}
+        {{- if eq $type "event" -}}
+          {{- $startsAt := (time.AsTime .event_starts_at).Format "2006-01-02" -}}
+          {{- $endsAt := (time.AsTime .event_ends_at).Format "2006-01-02" -}}
+          {{- $dateText := $startsAt -}}
+          {{- if ne $startsAt $endsAt -}}
+            {{- $dateText = printf "%s - %s" $startsAt $endsAt -}}
+          {{- end -}}
+          {{- $subtitle = $dateText -}}
+        {{- else -}}
+          {{- $tag := "" -}}
+          {{- with or .event_starts_at .created_at -}}
+            {{- $tag = (time.AsTime .).Format "2006-01-02" -}}
+          {{- end -}}
+          {{- $subtitle = printf "%s <br/> %s" $tag $summary -}}
+        {{- end -}}
+
+        {{- $cards = $cards | append (partial "shortcodes/card" (dict
+          "page" $.Page
+          "link" $link
+          "title" .title
+          "subtitle" $subtitle
+          "alt" .title
+          "tagType" "gray"
+          "tag" $title
+          )) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- partial "shortcodes/cards" (dict "cols" 3 "content" ((delimit $cards "") | safeHTML)) -}}
+</section>

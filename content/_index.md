@@ -29,10 +29,7 @@ layout: "hextra-home"
 {{< /hextra/hero-container >}}
 
 <div class="hx:mt-6 hx:mb-6 hx:w-full">
-{{< cards cols="2" >}}
-  {{< card link="/blog/2026-general-meeting-announcement/" title="2026년 정기총회" subtitle="3월 29일 오후 1시, 한빛미디어 A동 2층 강의실60" icon="calendar" >}}
-{{< /cards >}}
-</div>
+{{< discourse-feed-cards title="포스포올 소식" >}}
 
 <div class="hx:mt-6 hx:mb-6">
 {{< hextra/hero-section >}}
