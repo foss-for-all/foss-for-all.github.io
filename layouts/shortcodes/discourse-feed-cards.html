@@ -1,11 +1,12 @@
-{{- $feeds := slice
-  (dict "title" "소식" "json" "https://forum.fossforall.org/c/news/11.json" "more" "https://forum.fossforall.org/c/news/11" "type" "feed")
-  (dict "title" "블로그" "json" "https://forum.fossforall.org/c/blog/8.json" "more" "https://forum.fossforall.org/c/blog/8" "type" "feed")
-  (dict "title" "프로젝트" "json" "https://forum.fossforall.org/c/project-discussion/16.json" "more" "https://forum.fossforall.org/c/project-discussion/16" "type" "feed")
-  (dict "title" "포스포올 행사" "json" "https://forum.fossforall.org/c/calendar/fossforall-events/7.json" "more" "https://forum.fossforall.org/c/calendar/fossforall-events/7" "type" "event")
-  (dict "title" "포스포올 일정" "json" "https://forum.fossforall.org/c/calendar/fossforall-calendar/17.json" "more" "https://forum.fossforall.org/c/calendar/fossforall-calendar/17" "type" "event")
-  (dict "title" "커뮤니티 행사" "json" "https://forum.fossforall.org/c/calendar/community-events/6.json" "more" "https://forum.fossforall.org/c/calendar/community-events/6" "type" "event")
--}}
+{{- $discourse := site.Params.discourse | default dict -}}
+{{- $baseURL := $discourse.baseURL | default "" | replaceRE "/$" "" -}}
+{{- $feeds := $discourse.mainPageFeedCards -}}
+{{- if not $baseURL -}}
+  {{- errorf "missing required config: params.discourse.baseURL" -}}
+{{- end -}}
+{{- if not $feeds -}}
+  {{- errorf "missing required config: params.discourse.mainPageFeedCards" -}}
+{{- end -}}
 
 <section class="hx:my-12 hx:w-full">
   {{- with .Get "title" -}}
@@ -15,9 +16,20 @@
   {{- end -}}
   {{- $cards := slice -}}
   {{- range $feeds -}}
-    {{- $title := .title -}}
-    {{- $type := .type -}}
-    {{- $jsonURL := .json -}}
+    {{- $title := .title | default "" -}}
+    {{- $type := .type | default "" -}}
+    {{- $path := .path | default "" -}}
+    {{- if not $title -}}
+      {{- errorf "missing required config: params.discourse.mainPageFeedCards[].title" -}}
+    {{- end -}}
+    {{- if not $path -}}
+      {{- errorf "missing required config: params.discourse.mainPageFeedCards[].path for %q" $title -}}
+    {{- end -}}
+    {{- if not (in (slice "feed" "event") $type) -}}
+      {{- errorf "invalid or missing params.discourse.mainPageFeedCards[].type for %q: expected feed or event" $title -}}
+    {{- end -}}
+    {{- $moreURL := printf "%s%s" $baseURL $path -}}
+    {{- $jsonURL := printf "%s.json" $moreURL -}}
     {{- $feed := dict -}}
     {{- with try (resources.GetRemote $jsonURL) -}}
       {{- with .Err -}}
@@ -54,7 +66,7 @@
     {{- range $entries -}}
       {{- if and (lt $shown 1) (not .pinned) -}}
         {{- $shown = add $shown 1 -}}
-        {{- $link := printf "https://forum.fossforall.org/t/%s/%v" .slug .id -}}
+        {{- $link := printf "%s/t/%s/%v" $baseURL .slug .id -}}
         {{- $summary := .excerpt | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `image[0-9]+×[0-9]+\s+[0-9]+\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
         {{- if not $summary -}}
           {{- $topicURL := printf "%s.json" $link -}}

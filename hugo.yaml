@@ -110,6 +110,28 @@ languages:
             type: language-switch
 
 params:
+  discourse:
+    baseURL: "https://forum.fossforall.org"
+    mainPageFeedCards:
+      - title: 소식
+        path: /c/news/11
+        type: feed
+      - title: 블로그
+        path: /c/blog/8
+        type: feed
+      - title: 프로젝트
+        path: /c/project-discussion/16
+        type: feed
+      - title: 포스포올 행사
+        path: /c/calendar/fossforall-events/7
+        type: event
+      - title: 포스포올 일정
+        path: /c/calendar/fossforall-calendar/17
+        type: event
+      - title: 커뮤니티 행사
+        path: /c/calendar/community-events/6
+        type: event
+
   images:
     - /images/f4a-social-card.png
   navbar:
