@@ -11,5 +11,6 @@ FOSS for All is open to anyone interested in open source software and communitie
 FOSS for All is made possible through sponsorship, donations, and commitments from volunteers. We keep participation fees to a minimum to make it accessible to everyone, and maintain an open and voluntary spirit of participation in line with the Free and Open Source philosophy, with no commercial objectives.
 
 {{< cards >}}
+  {{< card link="https://2026.fossforall.org" title="FOSS for All Conference 2026" subtitle="The second edition of FOSS for All Conference to be held on 28th November 2025 at AWS Korea." >}}
   {{< card link="https://2025.fossforall.org" title="FOSS for All Conference 2025" subtitle="The first FOSS for All Conference to be held on 8th November 2025 at Kwangwoon University." >}}
 {{< /cards >}}
