@@ -1,0 +1,40 @@
+{{- /*
+  Card for a team member. Uses the photo in assets/images/board/<github>.<jpg|png>
+  (or the `image` param) when present, otherwise falls back to the GitHub avatar.
+
+  @param {string} github GitHub username, used for the fallback avatar and the default photo path.
+  @param {string} image Optional path to a photo in assets/ or page resources.
+  @param {string} link, title, subtitle Same as the hextra card shortcode.
+*/ -}}
+{{- $github := .Get "github" -}}
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+{{- $process := printf "%s %s" (.Get "method" | default "Resize" | humanize) (.Get "options" | default "800x webp q80") -}}
+
+{{- $image := "" -}}
+{{- $candidates := slice (printf "images/board/%s.jpg" $github) (printf "images/board/%s.png" $github) -}}
+{{- with .Get "image" -}}{{- $candidates = slice . -}}{{- end -}}
+{{- range $candidates -}}
+  {{- with or ($.Page.Resources.Get .) (resources.Get .) -}}
+    {{- $processed := .Process $process -}}
+    {{- $width = $processed.Width -}}
+    {{- $height = $processed.Height -}}
+    {{- $image = $processed.RelPermalink -}}
+    {{- break -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $image -}}
+  {{- $image = printf "https://github.com/%s.png" $github -}}
+{{- end -}}
+
+{{- partial "shortcodes/card" (dict
+  "page"     .Page
+  "link"     (.Get "link")
+  "title"    (.Get "title")
+  "subtitle" (.Get "subtitle")
+  "image"    $image
+  "alt"      (.Get "alt" | default (.Get "title"))
+  "width"    $width
+  "height"   $height
+  )
+-}}
