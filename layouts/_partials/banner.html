@@ -94,35 +94,35 @@
 {{- $aboutURL := "https://forum.fossforall.org/t/foss-for-all-microgrants-2026/105" -}}
 <div id="donation-banner" data-live-url="{{ getenv "HUGO_DONATIONBOX_LIVEURL" }}">
   <style>
-    #donation-banner{background:#14532d;color:#f0fdf4;font-size:.8125rem;padding:.5rem 1rem;display:flex;flex-direction:column;gap:.35rem}
+    #donation-banner{background:var(--color-primary-700);color:#fff;font-size:.8125rem;padding:.5rem 1rem;display:flex;flex-direction:column;gap:.4rem}
     #donation-banner a{color:inherit;text-decoration:none}
     #donation-banner b{font-weight:700}
     #donation-banner .db-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.15rem 1rem}
     #donation-banner .db-title{font-weight:700}
-    #donation-banner .db-track{width:100%;height:.4rem;border-radius:.2rem;background:rgba(255,255,255,.25);overflow:hidden}
-    #donation-banner .db-fill{display:block;height:100%;background:#4ade80;transition:width .6s}
-    #donation-banner .db-btn{background:#f0fdf4;color:#14532d;font-weight:700;border-radius:.25rem;padding:.1rem .75rem}
-    #donation-banner .db-btn:hover{background:#bbf7d0}
-    #donation-banner .db-about{background:transparent;color:#f0fdf4;border:1px solid rgba(255,255,255,.6)}
+    #donation-banner .db-track{width:100%;height:.4rem;border-radius:.2rem;background:rgba(255,255,255,.25);overflow:hidden;cursor:help}
+    #donation-banner .db-fill{display:block;height:100%;background:#fff;transition:width .6s}
+    #donation-banner .db-btn{background:#fff;color:var(--color-primary-700);font-weight:700;border-radius:.25rem;padding:.1rem .75rem}
+    #donation-banner .db-btn:hover{background:var(--color-primary-100)}
+    #donation-banner .db-about{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
     #donation-banner .db-about:hover{background:rgba(255,255,255,.15)}
     @media (max-width:640px){#donation-banner .db-title{display:none}}
   </style>
   <div class="db-top">
     <a class="db-title" href="{{ $aboutURL }}" target="_blank" rel="noreferrer">{{ T "donation_tagline" }}</a>
-    {{- with $db }}
-    <span>{{ T "donation_onetime" (dict "Amount" (lang.FormatNumberCustom 0 .amount)) | safeHTML }}</span>
-    {{- end }}
-    {{- with $sp }}
-    <span>{{ T "donation_sponsors" (dict "Usd" (lang.FormatNumberCustom 0 .usd) "Count" .count) | safeHTML }}</span>
+    {{- if and $db $sp }}
+    <span>{{ T "donation_onetime" (dict "Amount" (lang.FormatNumberCustom 0 $db.amount)) | safeHTML }}</span>
+    <span>{{ T "donation_sponsors" (dict "Usd" (lang.FormatNumberCustom 0 $sp.usd) "Count" $sp.count) | safeHTML }}</span>
+    {{- else if $sp }}
+    <span>{{ T "donation_sponsors" (dict "Usd" (lang.FormatNumberCustom 0 $sp.usd) "Count" $sp.count) | safeHTML }}</span>
     {{- end }}
     {{- if gt $target 0 }}
-    <span>{{ T "donation_total" (dict "Amount" (lang.FormatNumberCustom 0 $combined) "Target" (lang.FormatNumberCustom 0 $target) "Pct" $cpct) | safeHTML }}</span>
+    <span>{{ T "donation_total" (dict "Amount" (lang.FormatNumberCustom 0 $combined) "Target" (lang.FormatNumberCustom 0 $target)) | safeHTML }}</span>
     {{- end }}
     <a class="db-btn db-about" href="{{ $aboutURL }}" target="_blank" rel="noreferrer">{{ T "donation_about" }}</a>
     <a class="db-btn" href="{{ $donateURL }}" target="_blank" rel="noreferrer">{{ T "donation_donate" }}</a>
   </div>
   {{- if gt $target 0 }}
-  <div class="db-track"><span class="db-fill" style="width:{{ $cpct }}%"></span></div>
+  <div class="db-track" title="{{ $cpct }}%"><span class="db-fill" style="width:{{ $cpct }}%"></span></div>
   {{- end }}
   <script>
     (function () {
@@ -138,7 +138,8 @@
           }
           if (d.combined != null) set('db-t-amt', d.combined.toLocaleString('ko-KR'));
           if (d.combinedPct != null) {
-            set('db-t-pct', d.combinedPct);
+            var track = el.querySelector('.db-track');
+            if (track) track.title = d.combinedPct + '%';
             var fill = el.querySelector('.db-fill');
             if (fill) fill.style.width = d.combinedPct + '%';
           }

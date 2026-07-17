@@ -8,7 +8,7 @@ discourse_main_community_events: 커뮤니티 행사
 copyright: "© 2025-Present FOSS for All"
 donation_onetime: 일시후원 <b class="db-o-amt">{{ .Amount }}</b>원
 donation_sponsors: GitHub 후원 월 $<b class="db-sp-usd">{{ .Usd }}</b> · <span class="db-sp-cnt">{{ .Count }}</span>명
-donation_total: 현재 후원액 <b class="db-t-amt">{{ .Amount }}</b> / 목표 후원액 {{ .Target }}원 (<span class="db-t-pct">{{ .Pct }}</span>%)
-donation_tagline: 오픈소스 개발자/커뮤니티 지원에 함께해주세요
+donation_total: 현재 후원액 <b class="db-t-amt">{{ .Amount }}</b> / 목표 후원액 {{ .Target }}원
+donation_tagline: 오픈소스 개발자/커뮤니티 지원에 함께해주세요!
 donation_donate: 후원하기
 donation_about: 소개
