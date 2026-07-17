@@ -47,10 +47,11 @@
 {{- end -}}
 
 {{- /* GitHub Sponsors: monthly estimate, needs an org-owner token */ -}}
+{{- $sponsorsEnabled := false -}}{{- /* temporarily disabled; flip to true to re-enable */ -}}
 {{- $sp := false -}}
 {{- $token := getenv "HUGO_GITHUB_TOKEN" -}}
 {{- $org := getenv "HUGO_GITHUB_SPONSORS_ORG" -}}
-{{- if and $token $org -}}
+{{- if and $sponsorsEnabled $token $org -}}
   {{- $query := "query($l:String!){organization(login:$l){sponsorshipsAsMaintainer(first:100,includePrivate:false,activeOnly:true){totalCount nodes{isOneTimePayment tier{monthlyPriceInCents}}}}}" -}}
   {{- $q := dict "query" $query "variables" (dict "l" $org) -}}
   {{- $gopts := dict "method" "post" "headers" (dict "Authorization" (printf "Bearer %s" $token) "Content-Type" "application/json") "body" (jsonify $q) -}}
