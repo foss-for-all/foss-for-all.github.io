@@ -1,0 +1,151 @@
+{{- /*
+  Donation progress banner, rendered site-wide above the navbar.
+
+  Shows donationbox one-time donations and GitHub Sponsors stacked, plus a
+  combined total as a progress bar. Each source appears only when its data is
+  available; the banner renders nothing when neither is. Amounts are fetched
+  at build time; when HUGO_DONATIONBOX_LIVEURL is set (CORS proxy) they
+  refresh in the browser.
+
+  The GitHub figure is the current monthly recurring total of PUBLIC sponsors
+  (sponsorshipsAsMaintainer, includePrivate:false), which is monthly while
+  donationbox is cumulative, so the combined figure is approximate. Sponsors
+  USD is converted to KRW at the live ECB rate (api.frankfurter.dev);
+  HUGO_KRW_PER_USD overrides it and 1350 is the fallback. Caps at 100
+  sponsors (first:100, no pagination).
+
+  Env: HUGO_DONATIONBOX_UID, HUGO_DONATIONBOX_LIVEURL,
+  HUGO_GITHUB_SPONSORS_ORG, HUGO_GITHUB_TOKEN, HUGO_KRW_PER_USD.
+*/ -}}
+
+{{- /* donationbox: cumulative one-time donations */ -}}
+{{- $db := false -}}
+{{- $uid := getenv "HUGO_DONATIONBOX_UID" -}}
+{{- if $uid -}}
+  {{- $api := "https://link.donationbox.co.kr/paysoft_rental-logic" -}}
+  {{- $session := `[{"sessionUserIp":"0.0.0.0","sessionUserId":"","sessionLangType":"ko","sessionAccount":""}]` -}}
+  {{- $opts := dict "method" "post" "headers" (dict "Content-Type" "application/x-www-form-urlencoded") -}}
+  {{- $sumBody := querify "ds_json" (printf `[{"campaignuid":"%s"}]` $uid) "ds_session" $session -}}
+  {{- $res := try (resources.GetRemote (printf "%s/common/getExternCampaignSummary.json" $api) (merge $opts (dict "body" $sumBody))) -}}
+  {{- with $res.Err -}}
+    {{- warnf "donation banner: summary fetch failed: %s" . -}}
+  {{- else with $res.Value -}}
+    {{- $sum := (.Content | transform.Unmarshal).rtnMap -}}
+    {{- $perfBody := querify "ds_json" (printf `[{"campaignkey":%d,"regularflag":"N","irregularflag":"Y"}]` (int $sum.campaignkey)) "ds_session" $session -}}
+    {{- $res = try (resources.GetRemote (printf "%s/common/getCampaignPerformanceSummary.json" $api) (merge $opts (dict "body" $perfBody))) -}}
+    {{- with $res.Err -}}
+      {{- warnf "donation banner: performance fetch failed: %s" . -}}
+    {{- else with $res.Value -}}
+      {{- $perf := (.Content | transform.Unmarshal).rtnMap -}}
+      {{- $db = dict
+            "title" $sum.title
+            "url" (printf "https://link.donationbox.co.kr/donationBoxList.jsp?campaignuid=%s" $uid)
+            "target" (int $sum.irregulartargetamt)
+            "amount" (int $perf.irregulardoneamount) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* GitHub Sponsors: monthly estimate, needs an org-owner token */ -}}
+{{- $sp := false -}}
+{{- $token := getenv "HUGO_GITHUB_TOKEN" -}}
+{{- $org := getenv "HUGO_GITHUB_SPONSORS_ORG" -}}
+{{- if and $token $org -}}
+  {{- $query := "query($l:String!){organization(login:$l){sponsorshipsAsMaintainer(first:100,includePrivate:false,activeOnly:true){totalCount nodes{isOneTimePayment tier{monthlyPriceInCents}}}}}" -}}
+  {{- $q := dict "query" $query "variables" (dict "l" $org) -}}
+  {{- $gopts := dict "method" "post" "headers" (dict "Authorization" (printf "Bearer %s" $token) "Content-Type" "application/json") "body" (jsonify $q) -}}
+  {{- $gr := try (resources.GetRemote "https://api.github.com/graphql" $gopts) -}}
+  {{- with $gr.Err -}}
+    {{- warnf "donation banner: github sponsors fetch failed: %s" . -}}
+  {{- else with $gr.Value -}}
+    {{- with ((.Content | transform.Unmarshal).data.organization).sponsorshipsAsMaintainer -}}
+      {{- $cents := 0 -}}
+      {{- range .nodes -}}
+        {{- if not .isOneTimePayment -}}{{- with .tier -}}{{- $cents = add $cents (int .monthlyPriceInCents) -}}{{- end -}}{{- end -}}
+      {{- end -}}
+      {{- $sp = dict
+            "usd" (div (float $cents) 100.0)
+            "count" (int .totalCount)
+            "url" (printf "https://github.com/sponsors/%s" $org) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if or $db $sp -}}
+{{- /* USD->KRW: HUGO_KRW_PER_USD overrides; else live ECB rate; else 1350 */ -}}
+{{- $krw := 0 -}}
+{{- with getenv "HUGO_KRW_PER_USD" -}}{{- $krw = int . -}}{{- end -}}
+{{- if and $sp (eq $krw 0) -}}
+  {{- $fx := try (resources.GetRemote "https://api.frankfurter.dev/v1/latest?base=USD&symbols=KRW") -}}
+  {{- with $fx.Err -}}
+    {{- warnf "donation banner: fx fetch failed, using 1350: %s" . -}}
+  {{- else with $fx.Value -}}
+    {{- with (.Content | transform.Unmarshal).rates.KRW -}}{{- $krw = int (math.Round .) -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $krw 0 -}}{{- $krw = 1350 -}}{{- end -}}
+{{- $onetime := 0 -}}{{- with $db -}}{{- $onetime = .amount -}}{{- end -}}
+{{- $spKrw := 0 -}}{{- with $sp -}}{{- $spKrw = int (math.Round (mul .usd (float $krw))) -}}{{- end -}}
+{{- $combined := add $onetime $spKrw -}}
+{{- $target := 0 -}}{{- with $db -}}{{- $target = .target -}}{{- end -}}
+{{- $cpct := 0 -}}{{- if gt $target 0 -}}{{- $cpct = int (math.Min 100 (math.Round (mul (div (float $combined) (float $target)) 100))) -}}{{- end -}}
+{{- $title := "GitHub Sponsors" -}}{{- with $db -}}{{- $title = .title -}}{{- end -}}
+{{- $donateURL := "" -}}{{- with $db -}}{{- $donateURL = .url -}}{{- else with $sp -}}{{- $donateURL = .url -}}{{- end -}}
+<div id="donation-banner" data-live-url="{{ getenv "HUGO_DONATIONBOX_LIVEURL" }}">
+  <style>
+    #donation-banner{background:#14532d;color:#f0fdf4;font-size:.8125rem;padding:.5rem 1rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.25rem 1rem}
+    #donation-banner a{color:inherit;text-decoration:none}
+    #donation-banner b{font-weight:700}
+    #donation-banner .db-title{font-weight:700;white-space:nowrap}
+    #donation-banner .db-rows{display:flex;flex-direction:column;gap:.125rem;text-align:left;line-height:1.35}
+    #donation-banner .db-total{display:flex;flex-direction:column;gap:.25rem;min-width:12rem}
+    #donation-banner .db-track{display:block;height:.5rem;border-radius:.25rem;background:rgba(255,255,255,.25);overflow:hidden}
+    #donation-banner .db-fill{display:block;height:100%;background:#4ade80;transition:width .6s}
+    #donation-banner .db-btn{background:#f0fdf4;color:#14532d;font-weight:700;border-radius:.25rem;padding:.25rem .75rem;white-space:nowrap}
+    #donation-banner .db-btn:hover{background:#bbf7d0}
+    @media (max-width:640px){#donation-banner .db-title{display:none}}
+  </style>
+  <a class="db-title" href="{{ $donateURL }}" target="_blank" rel="noreferrer">{{ $title }}</a>
+  {{- if and $db $sp }}
+  <div class="db-rows">
+    <span>{{ T "donation_onetime" (dict "Amount" (lang.FormatNumberCustom 0 $onetime)) | safeHTML }}</span>
+    <span>{{ T "donation_sponsors" (dict "Usd" (lang.FormatNumberCustom 0 $sp.usd) "Count" $sp.count) | safeHTML }}</span>
+  </div>
+  {{- else if $sp }}
+  <div class="db-rows">
+    <span>{{ T "donation_sponsors" (dict "Usd" (lang.FormatNumberCustom 0 $sp.usd) "Count" $sp.count) | safeHTML }}</span>
+  </div>
+  {{- end }}
+  {{- if gt $target 0 }}
+  <div class="db-total">
+    <span>{{ T "donation_total" (dict "Amount" (lang.FormatNumberCustom 0 $combined) "Pct" $cpct) | safeHTML }}</span>
+    <span class="db-track"><span class="db-fill" style="width:{{ $cpct }}%"></span></span>
+  </div>
+  {{- end }}
+  <a class="db-btn" href="{{ $donateURL }}" target="_blank" rel="noreferrer">{{ T "donation_donate" }}</a>
+  <script>
+    (function () {
+      var el = document.getElementById('donation-banner');
+      if (!el.dataset.liveUrl) return;
+      function set(cls, val) { var n = el.querySelector('.' + cls); if (n) n.textContent = val; }
+      function tick() {
+        fetch(el.dataset.liveUrl).then(function (r) { return r.json() }).then(function (d) {
+          if (d.onetime != null) set('db-o-amt', d.onetime.toLocaleString('ko-KR'));
+          if (d.sponsorsUsd != null) {
+            set('db-sp-usd', d.sponsorsUsd.toLocaleString('en-US'));
+            set('db-sp-cnt', d.sponsorsCount);
+          }
+          if (d.combined != null) set('db-t-amt', d.combined.toLocaleString('ko-KR'));
+          if (d.combinedPct != null) {
+            set('db-t-pct', d.combinedPct);
+            var fill = el.querySelector('.db-fill');
+            if (fill) fill.style.width = d.combinedPct + '%';
+          }
+        }).catch(function () {})
+      }
+      tick();
+      setInterval(tick, 60000);
+    })();
+  </script>
+</div>
+{{- end -}}

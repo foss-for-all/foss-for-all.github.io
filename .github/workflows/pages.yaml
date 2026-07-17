@@ -56,6 +56,11 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          HUGO_DONATIONBOX_UID: ${{ vars.DONATIONBOX_UID }}
+          HUGO_DONATIONBOX_LIVEURL: ${{ vars.DONATIONBOX_LIVEURL }}
+          HUGO_GITHUB_SPONSORS_ORG: ${{ vars.SPONSORS_ORG }}
+          HUGO_GITHUB_TOKEN: ${{ secrets.SPONSORS_TOKEN }}
+          HUGO_KRW_PER_USD: ${{ vars.KRW_PER_USD }}
         run: |
           hugo \
             --gc --minify \
