@@ -99,7 +99,7 @@
     #donation-banner b{font-weight:700}
     #donation-banner .db-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.15rem 1rem}
     #donation-banner .db-title{font-weight:700}
-    #donation-banner .db-track{width:100%;height:.4rem;border-radius:.2rem;background:#d5e5fb;overflow:hidden;cursor:help}
+    #donation-banner .db-track{width:100%;height:.4rem;border-radius:.2rem;background:#d5e5fb;overflow:hidden}
     #donation-banner .db-fill{display:block;height:100%;background:#2979ff;transition:width .6s}
     #donation-banner .db-btn{background:#2979ff;color:#fff;font-weight:700;border-radius:.25rem;padding:.1rem .75rem}
     #donation-banner .db-btn:hover{background:#1c66e6}
@@ -116,13 +116,13 @@
     <span>{{ T "donation_sponsors" (dict "Usd" (lang.FormatNumberCustom 0 $sp.usd) "Count" $sp.count) | safeHTML }}</span>
     {{- end }}
     {{- if gt $target 0 }}
-    <span>{{ T "donation_total" (dict "Amount" (lang.FormatNumberCustom 0 $combined) "Target" (lang.FormatNumberCustom 0 $target)) | safeHTML }}</span>
+    <span>{{ T "donation_total" (dict "Amount" (lang.FormatNumberCustom 0 $combined) "Target" (lang.FormatNumberCustom 0 $target) "Pct" $cpct) | safeHTML }}</span>
     {{- end }}
     <a class="db-btn db-about" href="{{ $aboutURL }}" target="_blank" rel="noreferrer">{{ T "donation_about" }}</a>
     <a class="db-btn" href="{{ $donateURL }}" target="_blank" rel="noreferrer">{{ T "donation_donate" }}</a>
   </div>
   {{- if gt $target 0 }}
-  <div class="db-track" title="{{ $cpct }}%"><span class="db-fill" style="width:{{ $cpct }}%"></span></div>
+  <div class="db-track"><span class="db-fill" style="width:{{ $cpct }}%"></span></div>
   {{- end }}
   <script>
     (function () {
@@ -138,8 +138,7 @@
           }
           if (d.combined != null) set('db-t-amt', d.combined.toLocaleString('ko-KR'));
           if (d.combinedPct != null) {
-            var track = el.querySelector('.db-track');
-            if (track) track.title = d.combinedPct + '%';
+            set('db-t-pct', d.combinedPct);
             var fill = el.querySelector('.db-fill');
             if (fill) fill.style.width = d.combinedPct + '%';
           }
