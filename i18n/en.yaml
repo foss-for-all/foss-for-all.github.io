@@ -12,7 +12,7 @@ menu_disclosures: Disclosures & Bylaws
 copyright: "© 2025-Present FOSS for All"
 donation_onetime: One-time <b class="db-o-amt">{{ .Amount }}</b> KRW
 donation_sponsors: GitHub Sponsors $<b class="db-sp-usd">{{ .Usd }}</b>/mo · <span class="db-sp-cnt">{{ .Count }}</span>
-donation_total: Raised <b class="db-t-amt">{{ .Amount }}</b> / Goal {{ .Target }} KRW <b class="db-t-pct">{{ .Pct }}</b>%
+donation_total: Raised <b class="db-t-amt">{{ .Amount }}</b> / Goal {{ .Target }} KRW
 donation_tagline: Join us in supporting open-source developers and communities!
 donation_donate: Donate
 donation_about: About
