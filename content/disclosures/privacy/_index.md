@@ -11,6 +11,7 @@ weight: 20
 {{< /cards >}}
 
 <style>
-/* 카드가 같은 높이로 늘어나며 짧은 카드에 생기는 상단 여백 제거 */
-.hextra-cards { align-items: start; }
+/* 카드는 같은 높이로 유지하되(옆 카드와 맞춤), 내용을 위로 정렬해 상단 여백 제거 */
+.hextra-card { justify-content: flex-start !important; }
+.hextra-card > div { margin-top: 0 !important; }
 </style>
