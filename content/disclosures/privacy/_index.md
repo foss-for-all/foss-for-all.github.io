@@ -11,6 +11,6 @@ weight: 20
 {{< /cards >}}
 
 <style>
-/* 텍스트 카드 내용을 아래가 아닌 위로 정렬하여 상단 여백 제거 */
-.hextra-card > div { margin-top: 0 !important; }
+/* 카드가 같은 높이로 늘어나며 짧은 카드에 생기는 상단 여백 제거 */
+.hextra-cards { align-items: start; }
 </style>
