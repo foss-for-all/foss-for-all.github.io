@@ -7,7 +7,7 @@ weight: 20
 
 {{< cards >}}
   {{< card link="./2025.fossforall.org" title="FOSS for All Conference 2025" subtitle="FOSS for All Conference 2025 개인정보 처리방침" >}}
-  {{< card link="./pretalx.fossforall.org" title="pretalx.fossforall.org" subtitle="발표 제안(CFP) 시스템 개인정보 처리방침" >}}
+  {{< card link="./pretalx.fossforall.org" title="pretalx.fossforall.org" subtitle="발표 제안(CfP) 시스템 개인정보 처리방침" >}}
 {{< /cards >}}
 
 <style>
