@@ -1,3 +1,7 @@
+---
+title: pretalx.fossforall.org
+---
+
 ## pretalx.fossforall.org 개인정보 처리방침
 
 FOSS for All은 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 발표 제안(CFP) 시스템(pretalx, `pretalx.fossforall.org`)에 대하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
