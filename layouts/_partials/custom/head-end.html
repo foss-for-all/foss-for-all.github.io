@@ -1,0 +1,46 @@
+{{- $p := .RelPermalink -}}
+{{- $lang := .Site.Language.Lang -}}
+{{- $ko := $p -}}
+{{- $en := $p -}}
+{{- if eq $lang "en" -}}
+  {{- $ko = replaceRE `^/en(/|$)` "/" $p -}}
+{{- else -}}
+  {{- $en = printf "/en%s" $p -}}
+{{- end -}}
+<link rel="alternate" hreflang="ko" href="{{ $ko | absURL }}" />
+<link rel="alternate" hreflang="en" href="{{ $en | absURL }}" />
+<link rel="alternate" hreflang="x-default" href="{{ $ko | absURL }}" />
+<script>
+  (function () {
+    try {
+      var path = location.pathname;
+      var curLang = path === "/en" || path.indexOf("/en/") === 0 ? "en" : "ko";
+      var stored = null;
+      try { stored = localStorage.getItem("ffa-lang"); } catch (e) {}
+      var target = null;
+      if (stored === "ko" || stored === "en") {
+        target = stored;
+      } else if (!sessionStorage.getItem("ffa-auto")) {
+        var nav = (navigator.language || "en").toLowerCase();
+        target = nav.indexOf("ko") === 0 ? "ko" : "en";
+        try { sessionStorage.setItem("ffa-auto", "1"); } catch (e) {}
+      }
+      if (target && target !== curLang) {
+        var newPath =
+          target === "en" ? "/en" + path : path.replace(/^\/en(\/|$)/, "/");
+        if (newPath !== path) {
+          location.replace(newPath + location.search + location.hash);
+        }
+      }
+    } catch (e) {}
+  })();
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".hextra-language-options a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        var href = a.getAttribute("href") || "";
+        var lang = href === "/en" || href.indexOf("/en/") === 0 ? "en" : "ko";
+        try { localStorage.setItem("ffa-lang", lang); } catch (e) {}
+      });
+    });
+  });
+</script>
