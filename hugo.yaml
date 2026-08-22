@@ -1,8 +1,9 @@
 # Hugo configuration file
 title: FOSS for All
-
+baseURL: "https://fossforall.org/"
 
 enableGitInfo: false
+enableRobotsTXT: true
 hasCJKLanguage: true
 # import hextra as module
 module:
@@ -110,6 +111,10 @@ languages:
             type: language-switch
 
 params:
+  theme:
+    default: system
+    displayToggle: true
+
   discourse:
     baseURL: "https://forum.fossforall.org"
     mainPageFeedCards:
