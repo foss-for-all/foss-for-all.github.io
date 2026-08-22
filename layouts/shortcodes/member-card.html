@@ -1,40 +1,30 @@
-{{- /*
-  Card for a team member. Uses the photo in assets/images/board/<github>.<jpg|png>
-  (or the `image` param) when present, otherwise falls back to the GitHub avatar.
-
-  @param {string} github GitHub username, used for the fallback avatar and the default photo path.
-  @param {string} image Optional path to a photo in assets/ or page resources.
-  @param {string} link, title, subtitle Same as the hextra card shortcode.
-*/ -}}
 {{- $github := .Get "github" -}}
-{{- $width := 0 -}}
-{{- $height := 0 -}}
 {{- $process := printf "%s %s" (.Get "method" | default "Resize" | humanize) (.Get "options" | default "800x webp q80") -}}
-
 {{- $image := "" -}}
 {{- $candidates := slice (printf "images/board/%s.jpg" $github) (printf "images/board/%s.png" $github) -}}
 {{- with .Get "image" -}}{{- $candidates = slice . -}}{{- end -}}
 {{- range $candidates -}}
   {{- with or ($.Page.Resources.Get .) (resources.Get .) -}}
-    {{- $processed := .Process $process -}}
-    {{- $width = $processed.Width -}}
-    {{- $height = $processed.Height -}}
-    {{- $image = $processed.RelPermalink -}}
+    {{- $image = (.Process $process).RelPermalink -}}
     {{- break -}}
   {{- end -}}
 {{- end -}}
-{{- if not $image -}}
-  {{- $image = printf "https://github.com/%s.png" $github -}}
+{{- if not $image -}}{{- $image = printf "https://github.com/%s.png" $github -}}{{- end -}}
+{{- $title := .Get "title" -}}
+{{- $name := $title -}}
+{{- $role := "" -}}
+{{- if strings.Contains $title "(" -}}
+  {{- $name = strings.TrimSpace (index (split $title "(") 0) -}}
+  {{- $role = replaceRE `^[^(]*\(([^)]*)\).*$` "$1" $title -}}
 {{- end -}}
-
-{{- partial "shortcodes/card" (dict
-  "page"     .Page
-  "link"     (.Get "link")
-  "title"    (.Get "title")
-  "subtitle" (.Get "subtitle")
-  "image"    $image
-  "alt"      (.Get "alt" | default (.Get "title"))
-  "width"    $width
-  "height"   $height
-  )
--}}
+{{- $alt := .Get "alt" | default $name -}}
+<div class="ffa-member">
+  <div class="ffa-member-head">
+    <img class="ffa-member-photo" src="{{ $image | safeURL }}" alt="{{ $alt }}" loading="lazy" decoding="async" width="72" height="72" />
+    <div class="ffa-member-id">
+      <div class="ffa-member-name">{{ $name }}</div>
+      {{- with $role }}<div class="ffa-member-role">{{ . }}</div>{{ end -}}
+    </div>
+  </div>
+  {{- with .Get "subtitle" }}<p class="ffa-member-bio">{{ . }}</p>{{ end -}}
+</div>
