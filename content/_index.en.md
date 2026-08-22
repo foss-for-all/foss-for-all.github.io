@@ -1,6 +1,7 @@
 ---
 title: FOSS for All
 layout: "hextra-home"
+description: "FOSS for All is a non-profit community building a sustainable free and open source software ecosystem."
 ---
 
 {{< hextra/hero-container

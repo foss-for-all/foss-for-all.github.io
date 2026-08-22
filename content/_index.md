@@ -1,6 +1,7 @@
 ---
 title: FOSS for All
 layout: "hextra-home"
+description: "지속 가능한 자유·오픈소스 소프트웨어 생태계를 만들어가는 비영리 커뮤니티, FOSS for All 입니다."
 ---
 
 {{< hextra/hero-container

@@ -2,7 +2,7 @@
 title: FOSS for All 컨퍼런스
 ---
 
-FOSS for All에서 주최하는 FOSS for ALl컨퍼런스는 “Free and Open Source Software for All”이라는 슬로건 아래, 모두를 위한 오픈소스 컨퍼런스를 목표로 하는 비영리 오픈소스 커뮤니티 컨퍼런스입니다.
+FOSS for All에서 주최하는 FOSS for All 컨퍼런스는 “Free and Open Source Software for All”이라는 슬로건 아래, 모두를 위한 오픈소스 컨퍼런스를 목표로 하는 비영리 오픈소스 커뮤니티 컨퍼런스입니다.
 
 해외에서는 COSCUP (대만), FOSDEM (벨기에) 등 다양한 오픈소스 중심의 비영리 컨퍼런스가 활발히 열려 각국의 오픈소스 생태계의 자양분이 되어 주고 있습니다. 한국에서는 Python, Golang, Ubuntu, OpenStack, Kubernetes 같은 규모가 큰 글로벌 오픈소스 프로젝트는 운영진을 조직하고 후원사를 모집하여 자체 컨퍼런스를 운영할 수 있지만, 개인 혹은 작은 규모의 오픈소스 프로젝트는 기술 교류 행사를 조직하기 쉽지 않은 상황입니다.  FOSS for All은 한국에서도 다양한 분야의 오픈소스 프로젝트가 모이는 컨퍼런스를 열어 국내 오픈소스 생태계에 도움을 주고자 하는 취지에서 출발했습니다.
 
@@ -11,6 +11,6 @@ FOSS for All은 오픈소스 소프트웨어와 커뮤니티에 관심 있는 �
 FOSS for All의 모든 운영은 후원과 기부 그리고 자원봉사자들의 참여를 통해 이루어집니다. 참가비를 최소화하여 누구나 부담 없이 참여할 수 있도록 하며, 상업적 목적 없이 자유 오픈소스 철학에 따라 개방적이고 자발적인 참여 정신을 유지합니다.
 
 {{< cards >}}  
-  {{< card link="https://2026.fossforall.org" title="FOSS for All Conference 2026" subtitle="두번쨰 FOSS for All Conference 는 2026년 11월 28일 AWS Korea에서 개최 예정입니다." >}}
-  {{< card link="https://2025.fossforall.org" title="FOSS for All Conference 2025" subtitle="첫 FOSS for All Conference 는 2025년 11월 8일 광운대학교에서 개최 예정입니다." >}}
+  {{< card link="https://2026.fossforall.org" title="FOSS for All Conference 2026" subtitle="두 번째 FOSS for All Conference 는 2026년 11월 28일 AWS Korea에서 개최 예정입니다." >}}
+  {{< card link="https://2025.fossforall.org" title="FOSS for All Conference 2025" subtitle="첫 FOSS for All Conference 는 2025년 11월 8일 광운대학교에서 개최되었습니다." >}}
 {{< /cards >}}
