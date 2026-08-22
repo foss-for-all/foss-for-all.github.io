@@ -5,6 +5,15 @@ discourse_main_projects: 프로젝트
 discourse_main_fossforall_events: 행사
 discourse_main_fossforall_schedules: 일정
 discourse_main_community_events: 커뮤니티 행사
+menu_about: 소개
+menu_docs: 문서
+menu_news: 소식
+menu_disclosures: 공시/규정
+changeLanguage: 언어 변경
+changeTheme: 테마 변경
+light: 라이트
+dark: 다크
+system: 시스템
 copyright: "© 2025-Present FOSS for All"
 donation_onetime: 일시후원 <b class="db-o-amt">{{ .Amount }}</b>원
 donation_sponsors: GitHub 후원 월 $<b class="db-sp-usd">{{ .Usd }}</b> · <span class="db-sp-cnt">{{ .Count }}</span>명
