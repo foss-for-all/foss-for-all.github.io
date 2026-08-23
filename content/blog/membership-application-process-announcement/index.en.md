@@ -28,6 +28,6 @@ The new membership application and approval process is as follows:
 
 If you would like to check the details and submit your membership application, please click the link below.
 
-[**Apply for Membership**](/about/apply/)
+[**Apply for Membership**](/about/join/)
 
 If you have any questions about the membership process or need help filling out the application form, please feel free to contact the Board of Directors at `contact at fossforall.org` or reach out to anyone with the `@자비로운-종신-운영자` role on Discord.

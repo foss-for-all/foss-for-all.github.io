@@ -33,7 +33,7 @@ Check out our latest news and scheduled events!
   title="FOSS for All Events"
   json="https://forum.fossforall.org/c/calendar/fossforall-events/7.json"
   more="https://forum.fossforall.org/c/calendar/fossforall-events/7"
-  moreText="더 보기"
+  moreText="More"
   limit=3
 >}}
 
@@ -41,7 +41,7 @@ Check out our latest news and scheduled events!
   title="Community Events"
   json="https://forum.fossforall.org/c/calendar/community-events/6.json"
   more="https://forum.fossforall.org/c/calendar/community-events/6"
-  moreText="더 보기"
+  moreText="More"
   limit=3
 >}}
 
@@ -49,6 +49,6 @@ Check out our latest news and scheduled events!
   title="FOSS for All Schedules"
   json="https://forum.fossforall.org/c/calendar/fossforall-calendar/17.json"
   more="https://forum.fossforall.org/c/calendar/fossforall-calendar/17"
-  moreText="더 보기"
+  moreText="More"
   limit=3
 >}}

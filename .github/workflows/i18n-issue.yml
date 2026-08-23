@@ -1,0 +1,64 @@
+name: i18n gap tracker
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "content/**"
+      - "i18n/**"
+      - ".github/scripts/check-i18n.py"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Build issue body
+        id: body
+        run: |
+          {
+            echo 'body<<EOF'
+            python3 .github/scripts/check-i18n.py --markdown
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+      - name: Create or update tracking issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = process.env.BODY;
+            const title = 'Korean/English translation gaps';
+            const marker = 'managed by .github/workflows/i18n-issue.yml';
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const found = existing.data.find(
+              (i) => i.title === title && (i.body || '').includes(marker)
+            );
+            if (found) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: found.number,
+                body,
+              });
+              core.info(`Updated issue #${found.number}`);
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+              core.info(`Created issue #${created.data.number}`);
+            }
+        env:
+          BODY: ${{ steps.body.outputs.body }}
