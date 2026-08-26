@@ -78,7 +78,7 @@
       {{- if and (lt $shown 1) (not .pinned) -}}
         {{- $shown = add $shown 1 -}}
         {{- $link := printf "%s/t/%s/%v" $baseURL .slug .id -}}
-        {{- $summary := .excerpt | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `\S*[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
+        {{- $summary := .excerpt | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `^.{0,40}?[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | replaceRE `\S*[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
         {{- if not $summary -}}
           {{- $topicURL := printf "%s.json" $link -}}
           {{- with try (resources.GetRemote $topicURL) -}}
@@ -86,7 +86,7 @@
               {{- warnf "failed to fetch Discourse topic JSON %q: %s" $topicURL . -}}
             {{- else with .Value -}}
               {{- with ((. | transform.Unmarshal).post_stream.posts | first 1) -}}
-                {{- $summary = (index . 0).cooked | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `\S*[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
+                {{- $summary = (index . 0).cooked | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `^.{0,40}?[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | replaceRE `\S*[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
               {{- end -}}
             {{- end -}}
           {{- end -}}

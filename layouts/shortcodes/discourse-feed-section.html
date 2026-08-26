@@ -35,7 +35,7 @@
     {{- $isPinned := .pinned -}}
     {{- if and (lt $shown (int $limit)) (not $isPinned) -}}
       {{- $shown = add $shown 1 -}}
-      {{- $summary := .excerpt | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 150 -}}
+      {{- $summary := .excerpt | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `^.{0,40}?[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | replaceRE `\S*[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
       {{- $tag := "" -}}
       {{- with or .event_starts_at .created_at -}}
         {{- $tag = (time.AsTime .).Format "2006-01-02" -}}
@@ -48,7 +48,7 @@
             {{- warnf "failed to fetch Discourse topic JSON %q: %s" $topicURL . -}}
           {{- else with .Value -}}
             {{- with ((. | transform.Unmarshal).post_stream.posts | first 1) -}}
-              {{- $summary = (index . 0).cooked | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 150 -}}
+              {{- $summary = (index . 0).cooked | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `^.{0,40}?[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | replaceRE `\S*[0-9]+×[0-9]+\s+[0-9]+(?:\.[0-9]+)?\s+KB\s*` "" | strings.TrimSpace | truncate 150 -}}
             {{- end -}}
           {{- end -}}
         {{- end -}}
