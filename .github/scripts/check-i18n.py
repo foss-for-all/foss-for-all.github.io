@@ -6,7 +6,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 KO_ONLY_PREFIXES = ("content/disclosures/",)
-KO_ONLY_FILES = ("content/about/people.md",)
+KO_ONLY_FILES = ()
 
 
 def load_keys(path):
