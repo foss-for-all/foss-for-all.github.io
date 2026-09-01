@@ -4,7 +4,7 @@
 
 .hextra-cards:has(.ffa-member) {
   grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
-  grid-auto-rows: 1fr;
+  align-items: start;
 }
 .ffa-member {
   display: flex;
@@ -25,6 +25,11 @@
   align-items: center;
   gap: 0.85rem;
 }
+.ffa-member-photo-link {
+  flex: none;
+  line-height: 0;
+  border-radius: 9999px;
+}
 .ffa-member-photo {
   width: 72px;
   height: 72px;
@@ -39,6 +44,26 @@
   line-height: 1.25;
   color: #0f172a;
 }
+.ffa-member-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #2979ff;
+  text-decoration: none;
+}
+.ffa-member-link span {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.ffa-member-link svg {
+  flex: none;
+  margin-top: 3px;
+}
+.ffa-member-link:hover {
+  text-decoration: underline;
+}
 .ffa-member-role {
   margin-top: 0.15rem;
   font-size: 0.8rem;
@@ -51,6 +76,35 @@
   line-height: 1.65;
   color: #475569;
 }
+.ffa-member--cta {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+.ffa-cta-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+.ffa-cta-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
+}
+.ffa-cta-btn {
+  display: inline-block;
+  background: #2979ff;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+}
+.ffa-cta-btn:hover {
+  background: #1c66e6;
+}
 .dark .ffa-member {
   border-color: #262626;
   background: #171717;
@@ -62,9 +116,11 @@
 .dark .ffa-member-photo {
   background: #262626;
 }
-.dark .ffa-member-name {
+.dark .ffa-member-name,
+.dark .ffa-cta-title {
   color: #f5f5f5;
 }
-.dark .ffa-member-bio {
+.dark .ffa-member-bio,
+.dark .ffa-cta-text {
   color: #a3a3a3;
 }
