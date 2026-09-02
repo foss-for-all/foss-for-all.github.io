@@ -5,7 +5,7 @@ aliases:
   - /en/about/board-of-directors/
 ---
 
-Meet the board members and members who are part of FOSS for All. Past board members are available at [Disclosures - Board of Directors](../../disclosures/board-of-directors/).
+Meet some of the board members and members who are part of FOSS for All. Past board members are available at [Disclosures - Board of Directors](../../disclosures/board-of-directors/).
 
 {{< cards >}}
   {{< member-card github="sukso96100" link="https://github.com/sukso96100" title="Youngbin Han (Representative Director)" subtitle="오랜 시간 주로 우분투 커뮤니티에서 활동하며 지역화(번역)나 버그 리포트, 지역 커뮤니티 운영이나 각종 컨퍼런스 운영 등에서 기여를 많이 해 오고 있습니다. 우분투한국커뮤니티(혹은 Korean LoCo) 및 지역/국가별 우분투 커뮤니티를 관리하는 조직인 Ubuntu Local Community Council, UbuCon Asia 준비위원회 등에서 활동하고 있습니다." >}}
@@ -13,6 +13,7 @@ Meet the board members and members who are part of FOSS for All. Past board memb
   {{< member-card github="OctopusET" image="images/board/Sungjoon_Moon.jpg" link="https://github.com/OctopusET" title="Sungjoon Moon (Director)" subtitle="2017년 처음  ubuntu로 리눅스를 접한 이후 부터 자유 오픈소스 소프트웨어에 푹 빠져 지속적으로 자유 오픈소스 소프트웨어 위주로 소프트웨어를 사용해 왔습니다. 현재는 주로 아치리눅스를 사용하며 몇몇 패키지를 AUR에서 관리하고 있습니다. 자유 오픈소스 소프트웨어를 번역하는 것으로 기여를 시작했으며, 현재는 sway-contrib의 메인테이너로 활동하며 sway wayland compositor의 유저 스크립트를 관리하고 있습니다. RISC-V에도 관심이 많아 dav1d나 여러 프로젝트를 참여하려고 노력하고 있습니다. 자유 오픈소스 소프트웨어만 개발하며 먹고 살수 있는 삶을 목표로 하고 있습니다. 영화와 음악을 사랑합니다." method="Resize" options="600x q80 webp" >}}
   {{< member-card github="yha992" link="https://github.com/yha992" title="Hyunah Yoo (Director)" subtitle="안녕하세요. 한빛미디어 계열에서 개발자 행사 기획·운영을 하고 있습니다. 활동하는 커뮤니티는 여성 개발자의 성장을 위한 위민후코드 서울에서 운영진활동을 하고 있으며, 그리고 JAX KR, 랭체인 코리아의 운영진 및 AI 커뮤니티에서도 활동하고 있습니다. 지금 기술로는 진행하는 프로젝트가 없어서 개발 관련해서는 이해에 대한 노력이 필요합니다. 그래도 여러 장점이 많으니 많은 사람이 오픈소스 활동에 참여하고 나눌 수 있도록 지원하고 싶습니다" method="Resize" options="600x q80 webp" >}}
   {{< member-card image="images/members/kim-seokhyeon.webp" link="https://www.linkedin.com/in/seokhyeon-kim-6674501b2/" title="Seokhyeon Kim (Member)" subtitle="모빌리티 기업에서 백엔드 개발자로 근무하고 있는 김석현입니다. 한국 스프링 사용자 모임(KSUG)의 오거나이저로 활동하며 오픈소스 커뮤니티에 발을 들이게 되었습니다. 분산 시스템과 소프트웨어 아키텍처에 관심이 많으며, 업무 밖에서는 개발자들이 서로 교류하고 기술적·관계적 안정감을 얻을 수 있는 커뮤니티와 생태계를 만들어가는 데 관심을 두고 있습니다. 그 외에도 백엔드 개발 관련 저서를 출간한 경험이 있으며, dart_sentencepiece_tokenizer와 같은 작은 Dart 라이브러리를 직접 만들고 배포하거나 공익·공공 분야의 봉사활동에 참여하는 등 관심에서 출발한 여러 활동을 이어가고 있습니다." method="Fill" options="512x512 q85 webp" >}}
+  {{< member-card image="images/members/lee-jaeyeol.jpg" link="https://github.com/malkoG" title="Jaeyeol Lee (Member)" subtitle="어쩌다보니 취미로 개발자 커뮤니티를 여러개 운영하는 사람입니다. 사람을 위한 소프트웨어, 실용적인 소프트웨어, 내가 당장 만들고 싶은 소프트웨어를 만드는 것을 지향합니다." method="Fill" options="512x512 q85 webp Top" >}}
   <div class="ffa-member ffa-member--cta">
     <div class="ffa-cta-title">Join us!</div>
     <p class="ffa-cta-text">Many more members are part of FOSS for All. If our mission resonates with you, we invite you to join as a member.</p>
