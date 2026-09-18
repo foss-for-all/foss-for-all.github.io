@@ -6,7 +6,9 @@ weight: 20
 단체의 용도별 개인정보 처리방침 (일반, 온라인 서비스용, 컨퍼런스용 등)을 확인하실 수 있습니다.
 
 {{< cards >}}
+  {{< card link="./2026.fossforall.org" title="FOSS for All Conference 2026" subtitle="FOSS for All Conference 2026 개인정보 처리방침" >}}
   {{< card link="./2025.fossforall.org" title="FOSS for All Conference 2025" subtitle="FOSS for All Conference 2025 개인정보 처리방침" >}}
+  {{< card link="./tickets.fossforall.org" title="tickets.fossforall.org" subtitle="티켓 예매 시스템 개인정보 처리방침" >}}
   {{< card link="./pretalx.fossforall.org" title="pretalx.fossforall.org" subtitle="발표 제안(CfP) 시스템 개인정보 처리방침" >}}
 {{< /cards >}}
 
