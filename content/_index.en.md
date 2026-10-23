@@ -42,7 +42,7 @@ FOSS for All is an initiative started by various communities and projects in Kor
 {{< /hextra/hero-subtitle >}}
 </div>
 
-{{< hextra/feature-grid >}}
+{{< hextra/feature-grid cols="2" >}}
   {{< hextra/feature-card
     link="docs/fiscal-sponsorship/"
     title="Fiscal sponsorship 🪙✍️⚖️"
@@ -52,6 +52,11 @@ FOSS for All is an initiative started by various communities and projects in Kor
     link="docs/conference/"
     title="FOSS for All Conference 🗣️🎙️🧑‍💻"
     subtitle="An annual conference for the exchange of various FOSS communities in Korea and abroad, spreading lesser-known projects, and discussing common and new concerns among community participants. The goal is to encourage active and continuous participation and contribution to FOSS projects."
+  >}}
+  {{< hextra/feature-card
+    link="docs/microgrants/"
+    title="FOSS for All Microgrants 🌱🪙"
+    subtitle="The Microgrants program pools donations to help free and open source projects and communities cover development and operating costs. Launched as a pilot in 2026, it handles payments and accounting at a recipient's request to reduce the work of managing funds."
   >}}
   {{< hextra/feature-card
     title="Connecting ecosystem players 🧑‍💻🤝🏢"
