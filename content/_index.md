@@ -42,7 +42,7 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
 {{< /hextra/hero-subtitle >}}
 </div>
 
-{{< hextra/feature-grid >}}
+{{< hextra/feature-grid cols="2" >}}
   {{< hextra/feature-card
     link="docs/fiscal-sponsorship/"
     title="Fiscal sponsorship 🪙✍️⚖️"
@@ -52,6 +52,11 @@ FOSS for All (포스포올)은 지속 가능한 자유/오픈소스(Free and Ope
     link="docs/conference"
     title="FOSS for All 컨퍼런스 🗣️🎙️🧑‍💻"
     subtitle="국내외 다양한 자유/오픈소스 커뮤니티의 교류, 잘 알려지지 않은 프로젝트의 확산, 커뮤니티 참여자들의 공통된 그리고 새로운 고민을 함께 논의할 수 있는 연례 컨퍼런스로, 참석자들의 자유/오픈소스 프로젝트 적극적, 지속적으로 참여 및 기여 촉진을 목적으로 합니다."
+  >}}
+  {{< hextra/feature-card
+    link="docs/microgrants/"
+    title="FOSS for All Microgrants 🌱🪙"
+    subtitle="자유/오픈소스 프로젝트와 커뮤니티가 개발과 운영에 집중할 수 있도록, 기부금을 모아 소규모 재정 지원을 제공하는 사업입니다. 2026년에 시범사업을 시작했으며, 선정된 프로젝트와 커뮤니티의 요청에 따라 필요한 비용을 집행하고 정산하여 자금 관리에 따르는 부담을 덜고자 합니다."
   >}}
   {{< hextra/feature-card
     title="생태계 참여자 연결 🧑‍💻🤝🏢"

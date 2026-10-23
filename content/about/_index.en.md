@@ -15,10 +15,18 @@ Through this, we aim to support various open source projects and communities in 
 ### Fiscal sponsorship
 We aim to provide fiscal sponsorship so that free/open source communities and projects can raise and use public funds through corporate or individual sponsorships without registering as an organization or establishing a corporation, and to manage public funds and other assets conveniently and transparently. This is one of our mid- to long-term goals to be pursued after establishing a non-profit corporation.
 
+Our [Microgrants pilot]({{< relref "/docs/microgrants" >}}) gives us experience with the payment and accounting work that fiscal sponsorship involves.
+
 ### FOSS for All Conference
 We aim to hold an annual conference where various free/open source communities, both domestic and international, can interact, spread lesser-known projects, and discuss common and new concerns of community participants.
 
 Through this, we hope that conference participants will become more active and continuous contributors to free/open source projects.
+
+### FOSS for All Microgrants
+
+The Microgrants program pools donations to help free and open source projects and communities cover development and operating costs. Launched as a pilot in 2026, it handles payments and accounting at a recipient's request to reduce the work of managing funds.
+
+[Learn about Microgrants and see the selected projects by year]({{< relref "/docs/microgrants" >}})
 
 ### Building a Network Among Ecosystem Participants
 We aim to build a network among various participants in the free/open source ecosystem (maintainers, contributors, enthusiasts, users, companies, related organizations, etc.) and have FOSS for All act as a catalyst among them.
