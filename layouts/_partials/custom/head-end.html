@@ -10,6 +10,11 @@
 <link rel="alternate" hreflang="ko" href="{{ $ko | absURL }}" />
 <link rel="alternate" hreflang="en" href="{{ $en | absURL }}" />
 <link rel="alternate" hreflang="x-default" href="{{ $ko | absURL }}" />
+{{- range .AlternativeOutputFormats -}}
+  {{- if eq (lower .Name) "rss" }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}" />
+  {{- end -}}
+{{- end -}}
 <script>
   (function () {
     try {
