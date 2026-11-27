@@ -45,7 +45,6 @@ This Code of Conduct applies to all spaces and activities operated by FOSS for A
 Examples: offline events, gatherings, online communities, forums, social media, email, etc.
 
 It applies to all members participating in FOSS for All, including organizers, event participants and speakers, project maintainers, etc.   
-Regardless of space or role, everyone must follow these standards together. 
 
 If you witness or experience a violation of the Code of Conduct, please let us know at any time.    
 **coc@fossforall.org**
